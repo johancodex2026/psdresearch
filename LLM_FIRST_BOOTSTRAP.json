@@ -1,0 +1,20 @@
+{
+  "authoritative_first_reads": [
+    "LLM_FIRST_BOOTSTRAP.json",
+    ".johan/llm_entrypoint.json",
+    "SGPJ project packet"
+  ],
+  "human_facing_documents": "manual_or_ui_only_when_explicitly_requested",
+  "human_maintenance_expected": false,
+  "maintenance_model": "llm_first",
+  "project": "psdresearch",
+  "rules": [
+    "Use project.py as the semantic guardian of project state.",
+    "Maintain scripts, code and repository for LLM cognition and execution.",
+    "Do not create parallel human technical documentation by default.",
+    "Human-facing reading belongs in an explicitly requested human manual or UI.",
+    "Keep secrets, mutable databases, caches and generated exports out of Git."
+  ],
+  "schema": "johan.sgpj.llm_first_bootstrap.v1",
+  "title": "PSD Research"
+}

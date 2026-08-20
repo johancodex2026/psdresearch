@@ -1,0 +1,12 @@
+{
+  "canonical_state": "SGPJ project:psdresearch",
+  "first_read_order": [
+    "LLM_FIRST_BOOTSTRAP.json",
+    ".johan/llm_entrypoint.json",
+    "SGPJ project packet"
+  ],
+  "human_technical_docs_by_default": false,
+  "maintenance_model": "llm_first",
+  "project": "psdresearch",
+  "schema": "johan.sgpj.llm_entrypoint.v1"
+}
