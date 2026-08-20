@@ -1,0 +1,16 @@
+{
+  "name": "psdresearch",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "Multilingual public research site on Proto-Digital Beings.",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check.mjs",
+    "preview": "node scripts/serve.mjs",
+    "i18n:stamp": "node scripts/stamp-i18n.mjs"
+  }
+}

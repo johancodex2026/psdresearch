@@ -1,0 +1,50 @@
+{
+  "schema": "psdresearch.i18n-lock.v1",
+  "sourceLocale": "pt-BR",
+  "targets": {
+    "en": {
+      "home": {
+        "sourceDigest": "32fe2f9dabffa96d8f1d21c75c69ba860f38530a2a6b11596db808bb808fd9d5",
+        "status": "llm-assisted-candidate",
+        "reviewer": "Johan (LLM-assisted candidate)",
+        "reviewedAt": "2026-08-20T21:20:18.366Z"
+      },
+      "foundations": {
+        "sourceDigest": "0e6bbcc2815181afbd8fc52cdcb7520f3d40c7f8aeee8273d319ae84e820e471",
+        "status": "llm-assisted-candidate",
+        "reviewer": "Johan (LLM-assisted candidate)",
+        "reviewedAt": "2026-08-20T21:20:18.366Z"
+      },
+      "architecture": {
+        "sourceDigest": "642284c95dcf915bdd037efeecba982249f77598ea19334a48912ddc55dd183e",
+        "status": "llm-assisted-candidate",
+        "reviewer": "Johan (LLM-assisted candidate)",
+        "reviewedAt": "2026-08-20T21:20:18.366Z"
+      },
+      "registry": {
+        "sourceDigest": "4f08a9ba07bb28ed4f8f54ba287af3c800a918e8e921af24a138680242639f9b",
+        "status": "llm-assisted-candidate",
+        "reviewer": "Johan (LLM-assisted candidate)",
+        "reviewedAt": "2026-08-20T21:20:18.366Z"
+      },
+      "research": {
+        "sourceDigest": "076a0bea090e991b58a8783ec32655b7828b5da5fc9c4c303c122612242df7ee",
+        "status": "llm-assisted-candidate",
+        "reviewer": "Johan (LLM-assisted candidate)",
+        "reviewedAt": "2026-08-20T21:20:18.366Z"
+      },
+      "governance": {
+        "sourceDigest": "45bec756a50bdb132ddf682e932d73b5b4f0293d4a33b92e8a09ca61bb16a4fa",
+        "status": "llm-assisted-candidate",
+        "reviewer": "Johan (LLM-assisted candidate)",
+        "reviewedAt": "2026-08-20T21:20:18.366Z"
+      },
+      "about": {
+        "sourceDigest": "18d9fd7efa748afee96854719b6d6fce227922decbd7e11558177a35e4cc8205",
+        "status": "llm-assisted-candidate",
+        "reviewer": "Johan (LLM-assisted candidate)",
+        "reviewedAt": "2026-08-20T21:20:18.366Z"
+      }
+    }
+  }
+}

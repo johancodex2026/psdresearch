@@ -13,7 +13,9 @@
     "Maintain scripts, code and repository for LLM cognition and execution.",
     "Do not create parallel human technical documentation by default.",
     "Human-facing reading belongs in an explicitly requested human manual or UI.",
-    "Keep secrets, mutable databases, caches and generated exports out of Git."
+    "Keep secrets, mutable databases, caches and generated exports out of Git.",
+    "Treat public copy as a governed projection of source-backed claims, not as marketing prose.",
+    "Build localized pages from shared templates and validated catalogs; never hand-maintain duplicated HTML."
   ],
   "schema": "johan.sgpj.llm_first_bootstrap.v1",
   "title": "PSD Research"

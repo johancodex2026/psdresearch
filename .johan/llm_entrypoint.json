@@ -8,5 +8,8 @@
   "human_technical_docs_by_default": false,
   "maintenance_model": "llm_first",
   "project": "psdresearch",
+  "public_site_entrypoint": "src/content/catalog.pt-BR.mjs",
+  "translation_contract": "src/content/i18n-lock.json",
+  "claim_registry": "src/content/claims.mjs",
   "schema": "johan.sgpj.llm_entrypoint.v1"
 }
