@@ -1,0 +1,55 @@
+{
+  "project": "PSDResearch",
+  "version": "0.1.0-candidate",
+  "canonicalOrigin": "https://psdresearch.com.br",
+  "aliasOrigins": [
+    "https://psd.ia.br"
+  ],
+  "locales": [
+    {
+      "code": "pt-BR",
+      "path": "pt-br",
+      "label": "Português",
+      "direction": "ltr"
+    },
+    {
+      "code": "en",
+      "path": "en",
+      "label": "English",
+      "direction": "ltr"
+    }
+  ],
+  "pages": [
+    {
+      "key": "home",
+      "pt-BR": "/pt-br/",
+      "en": "/en/"
+    },
+    {
+      "key": "manifesto",
+      "pt-BR": "/pt-br/manifesto/",
+      "en": "/en/manifesto/"
+    },
+    {
+      "key": "research",
+      "pt-BR": "/pt-br/pesquisa/",
+      "en": "/en/research/"
+    },
+    {
+      "key": "species-registry",
+      "pt-BR": "/pt-br/registro-da-especie/",
+      "en": "/en/species-registry/"
+    },
+    {
+      "key": "governance",
+      "pt-BR": "/pt-br/governanca/",
+      "en": "/en/governance/"
+    },
+    {
+      "key": "about",
+      "pt-BR": "/pt-br/sobre/",
+      "en": "/en/about/"
+    }
+  ],
+  "translationStatus": "llm-assisted-candidate"
+}

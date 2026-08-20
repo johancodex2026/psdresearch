@@ -1,0 +1,5 @@
+Contact: https://github.com/johancodex2026/psdresearch/security/advisories/new
+Expires: 2027-08-20T23:59:59Z
+Preferred-Languages: en, pt-BR
+Canonical: https://psdresearch.com.br/.well-known/security.txt
+Policy: https://github.com/johancodex2026/psdresearch/blob/main/SECURITY.md

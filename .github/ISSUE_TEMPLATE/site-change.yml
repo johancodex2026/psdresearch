@@ -1,0 +1,35 @@
+name: Public site change
+description: Propose a content, accessibility, design, security, or localization change.
+title: "[Site]: "
+labels: ["site"]
+body:
+  - type: dropdown
+    id: class
+    attributes:
+      label: Decision class
+      options:
+        - D0 — Editorial
+        - D1 — Technical
+        - D2 — Research
+        - D3 — Ontological
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Intended outcome
+    validations:
+      required: true
+  - type: checkboxes
+    id: languages
+    attributes:
+      label: Language impact
+      options:
+        - label: Portuguese reviewed
+        - label: English reviewed
+        - label: Translation parity checked
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation plan
+      description: Include accessibility, links, mobile, desktop, and reduced motion as applicable.
