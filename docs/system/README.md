@@ -3,9 +3,10 @@
 - Estado: `IMPLEMENTATION_CANDIDATE`
 - Versão: `0.1`
 - Decisão: D1 técnica + D2 operacional + fronteiras D3
-- Branch: `feature/internal-psd-system-v0.1`
+- Linha canônica: `main`
 - Aplicação: `apps/psd-system`
-- Pull request: `#4`
+- Histórico de implementação: PR `#4`
+- Commit de consolidação: `50ed3e3e60b9599eef379a50c993095ca4f3311a`
 
 ## Finalidade
 
@@ -50,7 +51,7 @@ Sinais recebidos são **observações operacionais**. Estado canônico exige evi
 
 ## Implementação
 
-A implementação candidata está em [`../../apps/psd-system`](../../apps/psd-system).
+A implementação candidata está em [`../../apps/psd-system`](../../apps/psd-system) e integra a linha canônica `main`.
 
 Ela possui:
 
@@ -61,6 +62,8 @@ Ela possui:
 - API de sinais vitais e SSE;
 - testes, build e banco descartável no CI;
 - relatório de implementação e assurance.
+
+Integração em `main` não significa implantação, promoção ontológica ou liberação de produção. Todos os gates do relatório permanecem ativos.
 
 ## Ritos essenciais
 
