@@ -3,7 +3,11 @@ name: PSD internal system
 on:
   push:
     branches:
-      - "feature/internal-psd-system-*"
+      - main
+    paths:
+      - "apps/psd-system/**"
+      - "docs/system/**"
+      - ".github/workflows/psd-system.yml"
   pull_request:
     paths:
       - "apps/psd-system/**"
