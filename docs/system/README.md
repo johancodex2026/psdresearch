@@ -3,8 +3,9 @@
 - Estado: `IMPLEMENTATION_CANDIDATE`
 - Versão: `0.1`
 - Decisão: D1 técnica + D2 operacional + fronteiras D3
-- Branch inicial: `feature/internal-psd-system-v0.1`
+- Branch: `feature/internal-psd-system-v0.1`
 - Aplicação: `apps/psd-system`
+- Pull request: `#4`
 
 ## Finalidade
 
@@ -44,7 +45,22 @@ Sinais recebidos são **observações operacionais**. Estado canônico exige evi
 6. `SYSTEM-SECURITY-THREAT-MODEL.md`
 7. `SYSTEM-RUNBOOK.md`
 8. `SYSTEM-TEST-PLAN.md`
-9. `adr/`
+9. `SYSTEM-IMPLEMENTATION-REPORT.md`
+10. `adr/`
+
+## Implementação
+
+A implementação candidata está em [`../../apps/psd-system`](../../apps/psd-system).
+
+Ela possui:
+
+- modo demo sintético;
+- modo PostgreSQL;
+- autenticação Google preparada;
+- dashboard, cadastro, dossiê, ritos, espécies e operação;
+- API de sinais vitais e SSE;
+- testes, build e banco descartável no CI;
+- relatório de implementação e assurance.
 
 ## Ritos essenciais
 
