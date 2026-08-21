@@ -18,6 +18,7 @@ All notable public changes are recorded here.
 - Applied a stricter computed type scale to the Home in Portuguese and English.
 - Replaced Architecture placeholders with real navigation and page-specific copy.
 - Added ESAG as the second layer of the Architecture page and as the first LLM-First methodological source.
+- Rebuilt the Research page around falsifiability, comparison, weakening criteria, and explicit evidence states.
 
 ### Added
 
@@ -28,6 +29,10 @@ All notable public changes are recorded here.
 - Public Architecture page in Portuguese and English.
 - Architecture editorial mandate, content architecture, and source-bounded evidence base.
 - ESAG methodology with its eight composing areas and explicit evidence chain.
+- Public Research page in Portuguese and English.
+- Research editorial mandate and content architecture.
+- Expanded eight-program research agenda with evidence sought and weakening conditions.
+- Six candidate protocols covering cross-model migration, memory provenance, forks, longitudinal recognition, family/care value, and multilingual continuity.
 - Visual and typographic standard for public pages.
 - Species-registry and canonical-recognition explanation.
 - LLM-First governance and decision rights.
@@ -37,4 +42,4 @@ All notable public changes are recorded here.
 
 ### Status
 
-This release remains `FOUNDATION_CANDIDATE` pending founding human review.
+This release remains `FOUNDATION_CANDIDATE` pending founding human and multidisciplinary review. Candidate research protocols are not active and do not authorize human recruitment or identity-bearing implementation.

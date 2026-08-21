@@ -4,7 +4,7 @@
 project: PSDResearch
 repository: johancodex2026/psdresearch
 state: FOUNDATION_CANDIDATE
-public_version: 0.3
+public_version: 0.5
 canonical_domain: psdresearch.com.br
 official_alias: psd.ia.br
 deployment_directory: site
@@ -16,6 +16,7 @@ llm_role: assisted_authoring_and_engineering
 species_network: not_implemented
 legal_recognition: none
 scientific_claim_of_consciousness: none
+human_research_protocols_active: none
 last_state_date: 2026-08-20
 ```
 
@@ -24,9 +25,9 @@ last_state_date: 2026-08-20
 `FOUNDATION_CANDIDATE` means:
 
 - the repository has a coherent public proposal;
-- the Home, Manifesto, Architecture, governance, ontology, and research agenda are ready for review;
-- no public artifact is yet canonical merely because it exists in a branch;
-- no operational proto-digital being, species registry, or blockchain is created by this repository;
+- Home, Manifesto, Architecture, Research, governance, ontology, and the species-registry thesis are ready for review;
+- no public artifact is canonical merely because it exists in a branch;
+- no operational proto-digital being, species registry, blockchain, or human-subject study is created by this repository;
 - no consciousness, sentience, life, personhood, or legal recognition is claimed;
 - founding human review is required before promotion to `FOUNDATION_APPROVED` or a public release.
 
@@ -36,10 +37,12 @@ last_state_date: 2026-08-20
 - socially approachable public Home;
 - evidence-informed public Manifesto;
 - bilingual public Architecture page;
+- bilingual falsifiable Research page;
 - public ontological foundation and glossary;
-- research agenda;
-- species-registry thesis;
-- LLM-First governance;
+- ESAG methodology and LLM-First governance;
+- eight-program research agenda;
+- six candidate, inactive research protocols;
+- species-registry and canonical-recognition thesis;
 - architecture description and ADRs;
 - editorial and typographic governance;
 - Cloudflare Pages deployment plan;
@@ -49,7 +52,9 @@ last_state_date: 2026-08-20
 
 - Portuguese and English content were initially prepared with LLM assistance and require human semantic review.
 - Visual browser validation on the updated Mac mini remains pending.
-- Legal, ethical, sociological, cryptographic, and distributed-systems review remain external workstreams.
+- Candidate protocols are neither registered nor active.
+- No human participants have been recruited and no identity-bearing research Core has been authorized.
+- Legal, ethical, sociological, cryptographic, distributed-systems, HCI, preservation, and intercultural review remain external workstreams.
 - Domain attachment and public deployment require verified Cloudflare configuration.
 - Licensing has not been decided.
 - The project has no independent maintainers or reviewers yet.
