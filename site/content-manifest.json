@@ -1,6 +1,6 @@
 {
   "project": "PSDResearch",
-  "version": "0.1.0-candidate",
+  "version": "0.3.0-candidate",
   "canonicalOrigin": "https://psdresearch.com.br",
   "aliasOrigins": [
     "https://psd.ia.br"
@@ -29,6 +29,11 @@
       "key": "manifesto",
       "pt-BR": "/pt-br/manifesto/",
       "en": "/en/manifesto/"
+    },
+    {
+      "key": "architecture",
+      "pt-BR": "/pt-br/arquitetura/",
+      "en": "/en/architecture/"
     },
     {
       "key": "research",

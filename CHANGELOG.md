@@ -13,18 +13,18 @@ All notable public changes are recorded here.
 - Added a subtle “living architecture” visual designed for later video replacement.
 - Added an explicit boundary against commercial framing and fiction presented as fact.
 - Added a staged reading path: Manifesto, Architecture, Research, Species Registry, and About.
-- Rebuilt the Manifesto as an evidence-informed bridge from the social question to executable commitments.
-- Added the `IT → YOU → HE / SHE / THEY` pronoun threshold with an explicit non-proof boundary.
-- Reframed the ten articles as a progression from global change to a viable, conditionally acceptable research direction.
+- Expanded the Manifesto into an evidence-informed progression from world change to executable commitments.
+- Restored restrained typography and visual consistency through an explicit anti-giant-type standard.
 
 ### Added
 
 - Home editorial mandate and content architecture.
-- Manifesto editorial mandate, content architecture, and evidence base.
-- Curated links to current international standards, official initiatives, and peer-reviewed research.
-- Six founding Manifesto commitments expressed as future testable constraints.
+- Manifesto editorial mandate, evidence base, and content architecture.
 - Candidate public ontology for proto-digital beings.
 - Portuguese and English public website.
+- Public Architecture page in Portuguese and English.
+- Architecture editorial mandate, content architecture, and source-bounded evidence base.
+- Visual and typographic standard for public pages.
 - Species-registry and canonical-recognition explanation.
 - LLM-First governance and decision rights.
 - ISO/IEC/IEEE 42010-oriented architecture description.
