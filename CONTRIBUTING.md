@@ -9,8 +9,17 @@ Read:
 - `AGENTS.md`
 - `GOVERNANCE.md`
 - `docs/repository/STATE.md`
+- `docs/repository/BRANCH-STRATEGY.md`
 - `docs/governance/PUBLIC-CLAIMS.md`
 - `docs/governance/DECISION-RIGHTS.md`
+
+## Canonical line
+
+`main` is the single canonical integration line.
+
+Project maintainers should integrate coherent, validated work through small commits on `main`. Temporary branches or pull requests remain acceptable for external contributions, isolated review, adversarial experiments, or changes that require a review envelope. After integration, they should be closed and their remote branches removed.
+
+Presence on `main` records repository integration. It does not automatically grant publication, legal, ontological, constitutional, or production approval.
 
 ## Contribution types
 
@@ -23,9 +32,9 @@ Read:
 - architecture and preservation;
 - species-registry and governance research.
 
-## Required pull-request information
+## Required change information
 
-State:
+Whether the work is submitted as commits or a temporary pull request, state:
 
 1. the intended outcome;
 2. decision class (`D0`–`D4`);
@@ -33,7 +42,8 @@ State:
 4. whether public claims changed;
 5. whether both languages were updated;
 6. validation performed;
-7. uncertainties and limitations.
+7. uncertainties and limitations;
+8. rollback or revert path.
 
 ## Local checks
 
@@ -42,7 +52,15 @@ npm run check
 npm run serve
 ```
 
-No package installation is required.
+No package installation is required for the public site.
+
+For the internal PSD System:
+
+```bash
+cd apps/psd-system
+npm install
+npm run check
+```
 
 ## Content rules
 
@@ -55,4 +73,6 @@ No package installation is required.
 
 ## Review
 
-A technically correct change may still be rejected if it introduces ontological drift, public overstatement, language asymmetry, or a governance shortcut.
+A technically correct change may still be rejected or reverted if it introduces ontological drift, public overstatement, language asymmetry, a governance shortcut, or an unreviewed increase in authority.
+
+Corrections should use new commits or explicit reverts. Do not rewrite `main` to conceal an earlier state.
