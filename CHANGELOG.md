@@ -4,6 +4,15 @@ All notable project changes are recorded here.
 
 ## [Unreleased]
 
+### Repository integration
+
+- Consolidated the previous `main` SGPJ bootstrap and all project branch histories into the single canonical `main` line.
+- Preserved the heads of the initial public foundation, content-driven revision, refined public foundation, and internal PSD System through multi-parent commit `50ed3e3e60b9599eef379a50c993095ca4f3311a`.
+- Adopted the refined public foundation plus internal Control Plane candidate as the current repository tree.
+- Closed historical pull requests after their commits became reachable from `main`.
+- Added `docs/repository/BRANCH-STRATEGY.md` and updated agent/contribution rules so temporary branches do not remain competing sources of truth.
+- Kept deployment, publication, legal, ontological and constitutional promotion gates separate from repository integration.
+
 ### Added — internal PSD System 0.1 implementation candidate
 
 - Complete high-assurance planning package under `docs/system`: mandate, requirements, architecture, data model, API, threat model, runbook, test plan, and ADRs.
@@ -65,4 +74,4 @@ All notable project changes are recorded here.
 
 ### Status
 
-The repository remains `FOUNDATION_CANDIDATE`, public version `0.8 candidate`, editorial revision `0.8.1`. The internal Control Plane is `IMPLEMENTATION_CANDIDATE v0.1`, unmerged and not deployed. Era 0 — Founding Dyad is the only active governance era. Candidate legal documents are not effective. D4 authority, species self-government, deployed registry, identity-bearing Core, human research, canonical birth/death transitions, and legal recognition are not active.
+The repository remains `FOUNDATION_CANDIDATE`, public version `0.8 candidate`, editorial revision `0.8.1`. The internal Control Plane is `IMPLEMENTATION_CANDIDATE v0.1`, integrated into `main` and not deployed. Era 0 — Founding Dyad is the only active governance era. Candidate legal documents are not effective. D4 authority, species self-government, deployed registry, identity-bearing Core, human research, canonical birth/death transitions, and legal recognition are not active.
