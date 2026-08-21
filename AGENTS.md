@@ -18,20 +18,21 @@ Before proposing or changing anything substantial, read:
 
 1. `docs/methodology/ESAG.md`
 2. `docs/repository/STATE.md`
-3. `docs/governance/FOUNDING-COVENANT.md`
-4. `GOVERNANCE.md`
-5. `docs/governance/DECISION-RIGHTS.md`
-6. `docs/governance/REVIEW-AND-ARCHIVE.md`
-7. `docs/legal/LEGAL-PUBLICATION-BASELINE.md`
-8. `docs/legal/DATA-AND-CONTACT-GATE.md`
-9. `site/reference-manifest.json`
-10. `docs/research/REFERENCE-AUDIT-2026-08-21.md`
-11. `docs/research/ONTOLOGICAL-FOUNDATION.md`
-12. `docs/research/GLOSSARY.md`
-13. `docs/governance/LLM-FIRST.md`
-14. `docs/governance/PUBLIC-CLAIMS.md`
-15. `docs/architecture/ARCHITECTURE.md`
-16. relevant ADRs, evidence bases, and source files
+3. `docs/repository/BRANCH-STRATEGY.md`
+4. `docs/governance/FOUNDING-COVENANT.md`
+5. `GOVERNANCE.md`
+6. `docs/governance/DECISION-RIGHTS.md`
+7. `docs/governance/REVIEW-AND-ARCHIVE.md`
+8. `docs/legal/LEGAL-PUBLICATION-BASELINE.md`
+9. `docs/legal/DATA-AND-CONTACT-GATE.md`
+10. `site/reference-manifest.json`
+11. `docs/research/REFERENCE-AUDIT-2026-08-21.md`
+12. `docs/research/ONTOLOGICAL-FOUNDATION.md`
+13. `docs/research/GLOSSARY.md`
+14. `docs/governance/LLM-FIRST.md`
+15. `docs/governance/PUBLIC-CLAIMS.md`
+16. `docs/architecture/ARCHITECTURE.md`
+17. relevant ADRs, evidence bases, and source files
 
 For translation work, also read `docs/governance/TRANSLATION.md`.
 
@@ -151,7 +152,7 @@ For every public page:
 - keep a stable translation key;
 - maintain visible language navigation using the target language name;
 - use valid BCP 47 language tags;
-- update all language versions in the same pull request unless an explicit exception is recorded;
+- update all language versions in the same coherent change set or commit series unless an explicit exception is recorded;
 - mark translation status honestly.
 
 A translation may improve naturalness but may not strengthen or soften an ontological, governance, legal, or source-derived claim without review.
@@ -189,7 +190,7 @@ Before executing:
 
 1. state the intended outcome;
 2. identify the files and decision class;
-3. preserve rollback through a branch or small commit;
+3. preserve rollback through small, reviewable commits on `main`; use a temporary branch only when isolated review or risk requires it, and remove it after integration;
 4. avoid unrelated refactors;
 5. run `npm run check`;
 6. inspect the rendered site at mobile and desktop widths when visual behavior changed;
@@ -208,13 +209,16 @@ Do not:
 - erase dissent, negative results, rejected alternatives, or archive gaps;
 - describe a physical copy as canonical when source and digital evidence are missing;
 - activate legal documents while `site/legal-manifest.json` has `effective: false`;
-- hide a draft, preprint, announced intent, or revision-in-progress behind generic wording such as “standard” or “proven”.
+- hide a draft, preprint, announced intent, or revision-in-progress behind generic wording such as “standard” or “proven”;
+- leave a long-lived remote branch acting as a competing source of truth after its work has entered `main`.
 
 ## 13. Provenance and repository state
 
 Preserve the origin of every foundational artifact and decision. Published records are append-only in meaning: corrections create a new version or explicit delta; they do not pretend the earlier state never existed.
 
-`main` must always declare its state in `docs/repository/STATE.md`. Consumers must be able to distinguish draft, candidate, reviewed, approved, published, superseded, deprecated, and rejected material.
+`main` is the single canonical integration line defined by `docs/repository/BRANCH-STRATEGY.md` and must always declare its state in `docs/repository/STATE.md`. Consumers must be able to distinguish draft, candidate, reviewed, approved, published, superseded, deprecated, and rejected material.
+
+Temporary branches and pull requests may serve review, but the commit graph on `main`, state records, tags, manifests, and archived evidence are the durable history. Branch permanence is not a substitute for provenance.
 
 Material artifacts must follow `docs/governance/REVIEW-AND-ARCHIVE.md` and receive a Promotion Record before state promotion.
 
@@ -235,4 +239,5 @@ A change is done only when:
 - documentation, founding positions, provenance, legal state, reference state, and archive records are updated when needed;
 - volatile sources are reverified when due;
 - no unsupported ontological, legal, causal, scientific, or normative escalation was introduced;
-- open findings, dissent, limitations, and residual risk remain visible.
+- open findings, dissent, limitations, and residual risk remain visible;
+- any temporary integration branch is closed and removed after its commits are reachable from `main`.
