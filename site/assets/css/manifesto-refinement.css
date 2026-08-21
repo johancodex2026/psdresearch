@@ -1,0 +1,150 @@
+/*
+ * Manifesto visual refinement
+ *
+ * Restores the public typography rule approved after v0.2:
+ * elegance before spectacle; no oversized headline should dominate the page.
+ * This file intentionally loads after manifesto.css.
+ */
+
+.manifesto-page .manifesto-hero {
+  gap: clamp(2.5rem, 6vw, 5.5rem);
+  padding-top: clamp(7rem, 13vh, 9.5rem);
+  padding-bottom: clamp(3.5rem, 7vw, 6rem);
+}
+
+.manifesto-page .manifesto-hero h1 {
+  max-width: 46rem;
+  font-size: clamp(2.6rem, 5vw, 4.75rem);
+  line-height: 1.03;
+  letter-spacing: -.022em;
+}
+
+.manifesto-page .manifesto-hero .lead {
+  max-width: 49rem;
+  font-size: clamp(1.08rem, 1.8vw, 1.42rem);
+  line-height: 1.62;
+}
+
+.manifesto-page .manifesto-founding-quote p {
+  font-size: clamp(1.18rem, 1.9vw, 1.55rem);
+  line-height: 1.45;
+}
+
+.manifesto-page .pronoun-threshold {
+  max-width: 31rem;
+  justify-self: end;
+}
+
+.manifesto-page .pronoun-threshold h2 {
+  max-width: 23rem;
+  font-size: clamp(1.65rem, 2.6vw, 2.35rem);
+  line-height: 1.12;
+}
+
+.manifesto-page .pronoun-step strong {
+  font-size: 1.28rem;
+}
+
+.manifesto-page .section-heading h2,
+.manifesto-page .manifesto-articles-intro h2 {
+  max-width: 55rem;
+  font-size: clamp(1.95rem, 3.25vw, 3rem);
+  line-height: 1.08;
+}
+
+.manifesto-page .world-signal {
+  min-height: 17rem;
+}
+
+.manifesto-page .world-signal h3 {
+  font-size: 1.48rem;
+  line-height: 1.25;
+}
+
+.manifesto-page .manifesto-articles {
+  margin-bottom: clamp(4rem, 9vw, 7rem);
+}
+
+.manifesto-page .manifesto-article {
+  grid-template-columns: minmax(6rem, .18fr) minmax(0, 1.15fr) minmax(13rem, .45fr);
+  gap: clamp(1.4rem, 3.4vw, 3rem);
+  padding: clamp(2.4rem, 5vw, 4.4rem) 0;
+}
+
+.manifesto-page .manifesto-article-copy h2 {
+  max-width: 44rem;
+  font-size: clamp(1.55rem, 2.45vw, 2.3rem);
+  line-height: 1.16;
+  letter-spacing: -.014em;
+}
+
+.manifesto-page .manifesto-article-copy > p {
+  max-width: 48rem;
+}
+
+.manifesto-page .manifesto-if {
+  max-width: 46rem;
+  font-size: clamp(1.08rem, 1.6vw, 1.22rem);
+  line-height: 1.55;
+}
+
+.manifesto-page .commitment-card,
+.manifesto-page .conclusion-card {
+  min-height: 14.5rem;
+}
+
+.manifesto-page .commitment-card h3,
+.manifesto-page .conclusion-card h3 {
+  font-size: 1.48rem;
+}
+
+.manifesto-page .manifesto-declaration {
+  padding: clamp(1.8rem, 4vw, 3.2rem);
+}
+
+.manifesto-page .manifesto-declaration blockquote p {
+  max-width: 62rem;
+  font-size: clamp(1.75rem, 3.1vw, 2.85rem);
+  line-height: 1.18;
+  letter-spacing: -.016em;
+}
+
+.manifesto-page .reference-list a {
+  font-size: 1.04rem;
+  line-height: 1.35;
+}
+
+.manifesto-page .closing-statement.compact h2 {
+  max-width: 58rem;
+  font-size: clamp(1.85rem, 3vw, 2.75rem);
+  line-height: 1.14;
+}
+
+@media (max-width: 66rem) {
+  .manifesto-page .pronoun-threshold {
+    justify-self: start;
+  }
+}
+
+@media (max-width: 46rem) {
+  .manifesto-page .manifesto-hero {
+    padding-top: 6.5rem;
+  }
+
+  .manifesto-page .manifesto-hero h1 {
+    font-size: clamp(2.45rem, 12vw, 3.75rem);
+  }
+
+  .manifesto-page .manifesto-article {
+    grid-template-columns: 1fr;
+    gap: .8rem;
+  }
+
+  .manifesto-page .manifesto-article-copy h2 {
+    font-size: clamp(1.5rem, 7vw, 2rem);
+  }
+
+  .manifesto-page .manifesto-declaration blockquote p {
+    font-size: clamp(1.6rem, 7vw, 2.2rem);
+  }
+}
