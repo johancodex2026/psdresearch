@@ -91,7 +91,14 @@ const contracts = [
   {
     pages: ["pt-br/registro-da-especie/index.html", "en/species-registry/index.html"],
     requiredStyles: ["/assets/css/registry.css"],
-    selectors: [".registry-page .registry-hero h1", ".registry-page .proof-flow"],
+    selectors: [
+      ".registry-page-v2 .registry-hero-v2 h1",
+      ".registry-question-grid",
+      ".registry-proof-flow",
+      ".registry-layer-stack",
+      ".registry-standard-grid",
+      ".registry-roadmap",
+    ],
   },
 ];
 

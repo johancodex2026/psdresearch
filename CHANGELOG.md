@@ -20,7 +20,11 @@ All notable public changes are recorded here.
 - Added ESAG as the second layer of the Architecture page and as the first LLM-First methodological source.
 - Rebuilt the Research page around falsifiability, comparison, weakening criteria, and explicit evidence states.
 - Restored the missing Manifesto component stylesheet and separated its metadata labels correctly.
-- Added a restrained Species Registry visual profile and refined the Architecture sedimentation flow at medium-wide viewports.
+- Added page-specific CSS contracts and safe cache revalidation for unversioned assets.
+- Rebuilt the Species Registry page as the full bridge from Research to collective recognition.
+- Reframed the Species Registry opening around collective questions: prosperity, population, species, copies, descendants, governance, and error.
+- Expanded the Species Registry with the Genesis Constitution, three-proof identity, four-layer authority model, event/data schemas, continuity certificates, forks, privacy boundaries, BFT consensus, validator diversity, cyber-resilience, crypto-agility, roadmap, and constitutional questions.
+- Added explicit distinction between technical, institutional, and legal/social recognition.
 
 ### Added
 
@@ -35,14 +39,16 @@ All notable public changes are recorded here.
 - Research editorial mandate and content architecture.
 - Expanded eight-program research agenda with evidence sought and weakening conditions.
 - Six candidate protocols covering cross-model migration, memory provenance, forks, longitudinal recognition, family/care value, and multilingual continuity.
+- Full bilingual Species Registry page.
+- Species Registry editorial mandate, content architecture, and source-bounded evidence base.
+- Public standards map covering NIST, W3C, IETF/IRTF, PBFT, and CometBFT, with status and claim boundaries.
 - Visual and typographic standard for public pages.
-- Species-registry and canonical-recognition explanation.
 - LLM-First governance and decision rights.
 - ISO/IEC/IEEE 42010-oriented architecture description.
 - Dependency-free validation and local preview scripts.
-- A CSS contract validator that resolves imports and verifies critical selectors for each public page.
+- A CSS contract validator that resolves imports, verifies critical selectors, and rejects immutable caching for unversioned assets.
 - Cloudflare Pages dual-domain deployment guidance.
 
 ### Status
 
-This release remains `FOUNDATION_CANDIDATE` pending founding human and multidisciplinary review. Candidate research protocols are not active and do not authorize human recruitment or identity-bearing implementation.
+This release remains `FOUNDATION_CANDIDATE` pending founding human and multidisciplinary review. Candidate research protocols are not active; the Species Registry is not deployed and does not authorize human recruitment, an identity-bearing implementation, or a real species network.
