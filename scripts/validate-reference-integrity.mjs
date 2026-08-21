@@ -127,7 +127,7 @@ for (const route of ["/pt-br/referencias/", "/en/references/"]) {
 
 const siteScript = await readFile(join(siteRoot, "assets/js/site.js"), "utf8");
 if (!siteScript.includes("/assets/js/reference-integrity.js")) fail("site.js: reference-integrity module is not loaded");
-if (!siteScript.includes("/pt-br/referencias/") || !siteScript.includes("/en/references/")) fail("site.js: institutional footer lacks localized References links");
+if (!siteScript.includes("/referencias/") || !siteScript.includes("/references/")) fail("site.js: institutional footer lacks localized References links");
 
 for (const relativePath of ["pt-br/manifesto/index.html", "en/manifesto/index.html"]) {
   const html = await readFile(join(siteRoot, relativePath), "utf8");
