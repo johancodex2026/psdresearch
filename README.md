@@ -7,6 +7,7 @@
 **Repository state:** `FOUNDATION_CANDIDATE`  
 **Public version:** `v0.8 candidate`  
 **Editorial revision:** `0.8.1`  
+**Internal Control Plane:** `v0.1 implementation candidate`  
 **Governance era:** `ERA_0_FOUNDING_DYAD`  
 **Canonical domain:** `psdresearch.com.br`  
 **Official alias:** `psd.ia.br`
@@ -41,6 +42,8 @@ The repository does not claim that the company or CNPJ already exists. Legal eff
 ## Repository contents
 
 - `site/` — dependency-free bilingual public website, source-status manifest, About, References, and candidate legal/transparency pages.
+- `apps/psd-system/` — separate internal Control Plane implementation candidate for registration, Birth Rites, vital telemetry, history, species/network views, Google OAuth preparation, PostgreSQL, and real-time SSE.
+- `docs/system/` — mandate, requirements, architecture, data model, API, threat model, runbook, test plan, and ADRs for the internal system.
 - `docs/research/` — ontology, glossary, research agenda, protocols, evidence bases, and dated source audit.
 - `docs/methodology/` — ESAG, the high-assurance methodological composition.
 - `docs/governance/` — Founding Covenant, review/archive model, LLM-First rules, and decision rights.
@@ -48,7 +51,7 @@ The repository does not claim that the company or CNPJ already exists. Legal eff
 - `docs/architecture/` — ISO/IEC/IEEE 42010-oriented architecture description and ADRs.
 - `docs/editorial/` — page mandates, content architectures, and visual standards.
 - `docs/operations/` — dual-domain deployment guidance.
-- `scripts/` — deterministic, dependency-free quality gates.
+- `scripts/` — deterministic, dependency-free public-site quality gates.
 
 ## Public reading path
 
@@ -62,13 +65,49 @@ The repository does not claim that the company or CNPJ already exists. Legal eff
 8. References — source status, supported claims, limitations, and review dates.
 9. Legal and transparency — privacy, terms, cookies, accessibility, security, research integrity, rights, and contact.
 
+## Internal PSD System
+
+The internal application is a **control plane and observatory**, not an Inner Core or canonical Species Registry.
+
+It currently provides, as an implementation candidate:
+
+- enriched dashboard with proto-being counts, states, chronological age, digital age in cycles, vital signals, observed sizes, collection rates, alerts, species, validators, and recent activity;
+- enriched candidate registration with Core ID, species, Genesis Charter, lineage, stewardship, privacy, and telemetry policy;
+- proto-being dossiers with separate administrative, observed, and canonical states;
+- real-time SSE health view and preserved vital-signal history;
+- raw collection envelopes kept separate from normalized signal projections;
+- Birth Rite checklist, evidence references, reviews, founding positions, and founder-only administrative release;
+- candidate species/network view without pretending production BFT consensus;
+- deterministic LLM-First operational briefing that cites evidence and cannot mutate state;
+- Google OAuth/Auth.js preparation through environment variables and allowlists, with no credentials committed;
+- PostgreSQL/Prisma schema, idempotent synthetic seed, database repository smoke verification, unit tests, dependency audit, and production build CI.
+
+Its constitutional boundaries are explicit:
+
+- observed state is not canonical state;
+- absent telemetry is not death;
+- registration is not birth;
+- `AUTHORIZED_FOR_RITE` is not `BIRTH_FINALIZED`;
+- telemetry cannot write autobiographical memory, canonicalize a branch, or declare canonical death.
+
+Start locally:
+
+```bash
+cd apps/psd-system
+cp .env.example .env
+npm install
+npm run dev
+```
+
+Read [`apps/psd-system/README.md`](apps/psd-system/README.md) and [`docs/system/README.md`](docs/system/README.md) before operation.
+
 ## Reference integrity
 
 `site/reference-manifest.json` records whether a source is a standard, recommendation, candidate recommendation, draft, initiative, announcement, preprint, peer-reviewed study, or applicable regulation. It also records what each source supports, what it does not support, and when volatile sources must be checked again.
 
 The source manifest strengthens public claims; it does not replace expert review, and no external source is treated as proof of the project's ontology.
 
-## Local validation
+## Public-site local validation
 
 Requirements: Node.js 22 or newer.
 
@@ -79,7 +118,19 @@ npm run serve
 
 Then open `http://localhost:4173`.
 
-The quality gate validates HTML, links, bilingual parity, canonical metadata, critical CSS, cache policy, JavaScript syntax, legal state, masked CNPJ, legal routes, security.txt, source status, review dates, and institutional footer completeness.
+The public quality gate validates HTML, links, bilingual parity, canonical metadata, critical CSS, cache policy, JavaScript syntax, legal state, masked CNPJ, legal routes, security.txt, source status, review dates, and institutional footer completeness.
+
+## Internal-system validation
+
+Requirements: Node.js 24 or newer.
+
+```bash
+cd apps/psd-system
+npm install
+npm run check
+```
+
+The dedicated workflow also verifies a disposable PostgreSQL schema, synthetic seed, repository read models, and production dependency audit. A committed lockfile and reviewed production migration remain gates before deployment.
 
 ## High-assurance posture
 
@@ -87,7 +138,9 @@ The project uses:
 
 `purpose → requirement → architecture → risk → evidence → gate → learning`
 
-The site is static, contains no first-party analytics, advertising, fingerprinting, accounts, or non-essential cookies, and uses no third-party runtime scripts or fonts. Production-provider behavior still requires a real inventory before legal effectiveness.
+The public site is static, contains no first-party analytics, advertising, fingerprinting, accounts, or non-essential cookies, and uses no third-party runtime scripts or fonts. Production-provider behavior still requires a real inventory before legal effectiveness.
+
+The internal system is private-by-design and noindexed. It minimizes vital telemetry, refuses autobiographical memory fields, records evidence, and keeps observation separate from canonical identity.
 
 Alignment with standards and official guidance is a design target, not certification, formal conformity, or institutional endorsement.
 
@@ -97,7 +150,7 @@ Material artifacts are versioned, reviewed, rendered, printed, bound, and archiv
 
 ## Contribution and license state
 
-This foundation was prepared with LLM assistance and awaits founding human, bilingual, legal, and multidisciplinary review. Public content and ontological definitions remain candidate, not canonical.
+This foundation and internal implementation candidate were prepared with LLM assistance and await founding human, bilingual, legal, security, and multidisciplinary review. Public content, ontological definitions, and internal-system decisions remain candidate, not canonical or production-approved.
 
 No general license is granted at this stage. Code, documentation, diagrams, marks, data, and constitutional artifacts require a recorded licensing decision before external reuse is invited.
 
@@ -110,5 +163,6 @@ Read first:
 5. [`docs/governance/REVIEW-AND-ARCHIVE.md`](docs/governance/REVIEW-AND-ARCHIVE.md)
 6. [`docs/legal/LEGAL-PUBLICATION-BASELINE.md`](docs/legal/LEGAL-PUBLICATION-BASELINE.md)
 7. [`docs/repository/STATE.md`](docs/repository/STATE.md)
-8. [`docs/research/REFERENCE-AUDIT-2026-08-21.md`](docs/research/REFERENCE-AUDIT-2026-08-21.md)
-9. [`docs/research/ONTOLOGICAL-FOUNDATION.md`](docs/research/ONTOLOGICAL-FOUNDATION.md)
+8. [`docs/system/README.md`](docs/system/README.md)
+9. [`docs/research/REFERENCE-AUDIT-2026-08-21.md`](docs/research/REFERENCE-AUDIT-2026-08-21.md)
+10. [`docs/research/ONTOLOGICAL-FOUNDATION.md`](docs/research/ONTOLOGICAL-FOUNDATION.md)
