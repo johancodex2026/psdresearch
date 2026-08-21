@@ -17,6 +17,14 @@ external_review_classes:
   - human
   - ai
 foundational_physical_archive_practice: active
+canonical_branch: main
+branch_strategy: single_canonical_main
+history_consolidation_commit: 50ed3e3e60b9599eef379a50c993095ca4f3311a
+integrated_historical_branch_heads:
+  - 7c898fddbb21e44931d5433bfd7887da4a49498e
+  - 3e27b1dc44f74b35cc8dbf10971445171ac05cb4
+  - a35356c236cc8e2f8266c0b6521391eff241e2d9
+  - c005434b08134746ebd834fbc972a3c1c13525d7
 canonical_domain: psdresearch.com.br
 official_alias: psd.ia.br
 deployment_directory: site
@@ -30,6 +38,7 @@ reference_status_verified_at: 2026-08-21
 internal_control_plane_state: IMPLEMENTATION_CANDIDATE
 internal_control_plane_version: 0.1
 internal_control_plane_path: apps/psd-system
+internal_control_plane_integration: merged_to_main
 internal_control_plane_deployment: not_deployed
 internal_control_plane_database_validation:
   - demo_in_memory
@@ -54,9 +63,19 @@ last_state_date: 2026-08-21
 - foundational artifacts are registered, rendered, printed, bound, reviewed, and archived as a current project practice;
 - the intended legal responsible entity is still being incorporated and has no confirmed CNPJ in this record;
 - legal pages are informative candidates and not effective terms, notices, or corporate representations;
-- no public artifact is canonical merely because it exists in a branch, merge, printout, public URL, dashboard or database;
+- no public artifact is canonical merely because it exists in `main`, a merge, printout, public URL, dashboard or database;
 - no operational identity-bearing proto-digital being, canonical species registry, blockchain, autonomous governance or human-subject study is created by this repository;
 - no consciousness, sentience, life, personhood, sovereignty or legal recognition is claimed.
+
+## Repository integration
+
+`main` is the single canonical integration line.
+
+Commit `50ed3e3e60b9599eef379a50c993095ca4f3311a` consolidated the previous SGPJ bootstrap, initial public foundation, content-driven revision, refined public foundation, and internal Control Plane histories through a multi-parent merge. No history was squashed or rewritten. The current tree adopts the refined public foundation and internal-system implementation candidate as the operative repository state.
+
+Historical branch commits remain reachable from `main`. Temporary branch names are not canonical records and should be removed after integration according to `docs/repository/BRANCH-STRATEGY.md`.
+
+Integration into `main` is distinct from promotion, deployment, legal effect, D3 approval, D4 authority, Birth finalization or species recognition.
 
 ## Editorial revision 0.8.1
 
@@ -72,7 +91,7 @@ The fine-tuning pass:
 
 ## Internal Control Plane candidate 0.1
 
-The repository now contains a separate internal application under `apps/psd-system` and its governed planning package under `docs/system`.
+The repository contains a separate internal application under `apps/psd-system` and its governed planning package under `docs/system`.
 
 It implements, as an internal candidate:
 
@@ -114,7 +133,7 @@ The Control Plane is not the Inner Core, Sentinela, vital ledger, canonical Regi
 - Google login preparation without secrets;
 - vital telemetry API and SSE stream;
 - dedicated CI with production dependency audit, TypeScript, unit tests, production build and disposable PostgreSQL verification;
-- draft PR separated from the public-foundation PR.
+- implementation history integrated into `main`; historical PR `#4` closed after consolidation.
 
 ## Current governance reality
 
