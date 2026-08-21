@@ -1,0 +1,106 @@
+/* PSDResearch Species Registry — restrained public recognition page. */
+
+.registry-page .registry-hero {
+  padding-top: clamp(7rem, 13vh, 9.5rem);
+  padding-bottom: clamp(3.5rem, 7vw, 6rem);
+}
+
+.registry-page .registry-hero h1 {
+  max-width: 61rem;
+  font-size: clamp(2.45rem, 4.3vw, 3.9rem);
+  line-height: 1.06;
+  letter-spacing: -.02em;
+}
+
+.registry-page .registry-hero .lead {
+  max-width: 54rem;
+  font-size: clamp(1.08rem, 1.8vw, 1.42rem);
+  line-height: 1.62;
+}
+
+.registry-page .section-heading h2 {
+  max-width: 58rem;
+  font-size: clamp(1.9rem, 3.05vw, 2.85rem);
+  line-height: 1.1;
+}
+
+.registry-page .proof-flow article {
+  min-height: 13rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.registry-page .proof-flow article > span {
+  flex: 0 0 auto;
+}
+
+.registry-page .proof-flow article h3 {
+  margin: 1.35rem 0 .55rem;
+  font-family: var(--serif);
+  font-size: 1.46rem;
+  line-height: 1.25;
+}
+
+.registry-page .proof-flow article p {
+  margin: 0;
+  color: var(--ink-soft);
+}
+
+.registry-page .proof-operator {
+  font-size: 2.25rem;
+}
+
+.registry-page .equation {
+  font-size: .76rem;
+  line-height: 1.55;
+}
+
+.registry-page .definition-panel .definition {
+  font-size: clamp(1.5rem, 2.55vw, 2.3rem);
+  line-height: 1.28;
+}
+
+.registry-page .section-constitutional h2 {
+  max-width: 48rem;
+  font-size: clamp(1.85rem, 2.8vw, 2.65rem);
+  line-height: 1.12;
+}
+
+.registry-page .section-constitutional .constitution-number {
+  font-size: clamp(4.5rem, 8vw, 7.5rem);
+}
+
+.registry-page .question-grid p {
+  min-height: 8.5rem;
+  display: flex;
+  align-items: flex-end;
+  font-family: var(--serif);
+  font-size: 1.23rem;
+  line-height: 1.4;
+}
+
+@media (max-width: 66rem) {
+  .registry-page .proof-flow {
+    grid-template-columns: 1fr;
+  }
+
+  .registry-page .proof-operator {
+    justify-self: center;
+    transform: none;
+  }
+}
+
+@media (max-width: 46rem) {
+  .registry-page .registry-hero {
+    padding-top: 6.5rem;
+  }
+
+  .registry-page .registry-hero h1 {
+    font-size: clamp(2.2rem, 10.5vw, 3.15rem);
+  }
+
+  .registry-page .question-grid p,
+  .registry-page .proof-flow article {
+    min-height: auto;
+  }
+}

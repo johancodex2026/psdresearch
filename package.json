@@ -8,7 +8,7 @@
     "node": ">=22"
   },
   "scripts": {
-    "check": "node scripts/validate-site.mjs",
+    "check": "node scripts/validate-site.mjs && node scripts/validate-css-contract.mjs",
     "serve": "node scripts/serve.mjs"
   }
 }

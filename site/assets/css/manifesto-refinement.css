@@ -3,7 +3,6 @@
  *
  * Restores the public typography rule approved after v0.2:
  * elegance before spectacle; no oversized headline should dominate the page.
- * This file intentionally loads after manifesto.css.
  */
 
 .manifesto-page .manifesto-hero {
@@ -56,9 +55,28 @@
   min-height: 17rem;
 }
 
+.manifesto-page .world-signal time,
+.manifesto-page .world-signal .source-kind {
+  display: block;
+}
+
+.manifesto-page .world-signal .source-kind {
+  margin-top: .3rem;
+}
+
 .manifesto-page .world-signal h3 {
+  margin: 1.35rem 0 .7rem;
   font-size: 1.48rem;
   line-height: 1.25;
+}
+
+.manifesto-page .world-signal p {
+  flex: 1;
+}
+
+.manifesto-page .world-signal a {
+  margin-top: auto;
+  padding-top: 1.1rem;
 }
 
 .manifesto-page .manifesto-articles {

@@ -1,0 +1,23 @@
+/* Responsive refinement for the experience-to-history sequence. */
+
+.architecture-page .sedimentation-flow li {
+  min-height: 9.75rem;
+}
+
+.architecture-page .sedimentation-flow strong {
+  margin-top: 1.2rem;
+  font-size: 1.06rem;
+  line-height: 1.35;
+}
+
+@media (min-width: 66.01rem) and (max-width: 90rem) {
+  .architecture-page .sedimentation-flow {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    row-gap: 1rem;
+  }
+
+  .architecture-page .sedimentation-flow li:nth-child(3)::after,
+  .architecture-page .sedimentation-flow li:nth-child(6)::after {
+    content: none;
+  }
+}

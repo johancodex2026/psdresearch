@@ -19,6 +19,8 @@ All notable public changes are recorded here.
 - Replaced Architecture placeholders with real navigation and page-specific copy.
 - Added ESAG as the second layer of the Architecture page and as the first LLM-First methodological source.
 - Rebuilt the Research page around falsifiability, comparison, weakening criteria, and explicit evidence states.
+- Restored the missing Manifesto component stylesheet and separated its metadata labels correctly.
+- Added a restrained Species Registry visual profile and refined the Architecture sedimentation flow at medium-wide viewports.
 
 ### Added
 
@@ -38,6 +40,7 @@ All notable public changes are recorded here.
 - LLM-First governance and decision rights.
 - ISO/IEC/IEEE 42010-oriented architecture description.
 - Dependency-free validation and local preview scripts.
+- A CSS contract validator that resolves imports and verifies critical selectors for each public page.
 - Cloudflare Pages dual-domain deployment guidance.
 
 ### Status
