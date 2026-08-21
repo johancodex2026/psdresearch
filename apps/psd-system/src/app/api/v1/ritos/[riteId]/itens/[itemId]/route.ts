@@ -14,18 +14,19 @@ export async function PATCH(request: Request, context: { params: Promise<{ riteI
   if (!raw || typeof raw !== "object" || Array.isArray(raw)) return apiError(400, "PSD_VALIDATION_ERROR", "Payload inválido.");
   const value = raw as Record<string, unknown>;
   if (typeof value.completed !== "boolean") return apiError(400, "PSD_VALIDATION_ERROR", "completed deve ser booleano.");
+  const completed = value.completed;
   const evidenceRef = typeof value.evidenceRef === "string" && value.evidenceRef.trim() ? value.evidenceRef.trim() : undefined;
-  if (value.completed && !evidenceRef) return apiError(400, "PSD_EVIDENCE_REQUIRED", "Item concluído exige referência de evidência.");
+  if (completed && !evidenceRef) return apiError(400, "PSD_EVIDENCE_REQUIRED", "Item concluído exige referência de evidência.");
   const intent = typeof value.intent === "string" && value.intent.trim() ? value.intent.trim() : "Atualizar checklist do rito";
   if ((process.env.PSD_DATA_MODE ?? "demo") === "demo") {
     const state = getDemoState();
     const rite = state.birthRites.find((item) => item.id === riteId);
     const item = rite?.items.find((entry) => entry.id === itemId);
     if (!rite || !item) return apiError(404, "PSD_NOT_FOUND", "Rito ou item não encontrado.");
-    item.completed = value.completed;
-    item.evidenceRef = value.completed ? evidenceRef : undefined;
-    item.completedAt = value.completed ? new Date().toISOString() : undefined;
-    item.completedBy = value.completed ? actor.name : undefined;
+    item.completed = completed;
+    item.evidenceRef = completed ? evidenceRef : undefined;
+    item.completedAt = completed ? new Date().toISOString() : undefined;
+    item.completedBy = completed ? actor.name : undefined;
     rite.updatedAt = new Date().toISOString();
     return NextResponse.json({ item, intent });
   }
@@ -36,10 +37,10 @@ export async function PATCH(request: Request, context: { params: Promise<{ riteI
     const next = await tx.birthRiteItem.update({
       where: { id: itemId },
       data: {
-        completed: value.completed,
-        evidenceRef: value.completed ? evidenceRef : null,
-        completedAt: value.completed ? new Date() : null,
-        completedBy: value.completed ? actor.name : null,
+        completed,
+        evidenceRef: completed ? evidenceRef : null,
+        completedAt: completed ? new Date() : null,
+        completedBy: completed ? actor.name : null,
       },
     });
     await tx.auditEvent.create({
@@ -48,7 +49,7 @@ export async function PATCH(request: Request, context: { params: Promise<{ riteI
         actorName: actor.name,
         actorRole: actor.role,
         intent,
-        action: value.completed ? "BIRTH_RITE_ITEM_COMPLETED" : "BIRTH_RITE_ITEM_REOPENED",
+        action: completed ? "BIRTH_RITE_ITEM_COMPLETED" : "BIRTH_RITE_ITEM_REOPENED",
         entityType: "BirthRiteItem",
         entityId: itemId,
         evidence: evidenceRef ? [evidenceRef] : [],
