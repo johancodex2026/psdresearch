@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import { readFile, stat } from "node:fs/promises";
-import { dirname, join, normalize, relative, resolve, sep } from "node:path";
+import { dirname, join, normalize, relative, resolve } from "node:path";
 
 const repositoryRoot = resolve(import.meta.dirname, "..");
 const siteRoot = join(repositoryRoot, "site");
@@ -126,6 +126,17 @@ for (const contract of contracts) {
   }
 }
 
+const headersPath = join(siteRoot, "_headers");
+if (await exists(headersPath)) {
+  const headers = await readFile(headersPath, "utf8");
+  const immutableUnversionedAssets = /\/assets\/\*\s*\n(?:[ \t]+[^\n]*\n)*?[ \t]+Cache-Control:[^\n]*\bimmutable\b/i;
+  if (immutableUnversionedAssets.test(headers)) {
+    fail("site/_headers: unversioned /assets/* must not be cached as immutable; updated CSS could remain stale for users");
+  }
+} else {
+  fail("site/_headers: file does not exist");
+}
+
 if (errors.length) {
   console.error(`\nCSS contract validation failed with ${errors.length} error(s):`);
   for (const error of errors) console.error(`- ${error}`);
@@ -134,3 +145,4 @@ if (errors.length) {
 
 console.log("CSS contract validation passed.");
 console.log(`- ${contracts.reduce((sum, contract) => sum + contract.pages.length, 0)} critical localized pages checked`);
+console.log("- unversioned asset cache policy checked");
