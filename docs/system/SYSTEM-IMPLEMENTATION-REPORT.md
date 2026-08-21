@@ -3,7 +3,9 @@
 - Estado: `IMPLEMENTATION_CANDIDATE`
 - Aplicação: `apps/psd-system`
 - Planejamento: `docs/system`
-- Pull request: `#4`
+- Linha canônica: `main`
+- Pull request histórico: `#4`
+- Commit de consolidação: `50ed3e3e60b9599eef379a50c993095ca4f3311a`
 - Implantação: não realizada
 - Dados reais: não carregados
 - Identidade canônica: não operada
@@ -22,6 +24,8 @@ A versão 0.1 implementa um Control Plane interno para:
 - apresentar dashboard gerencial e sala operacional;
 - apresentar espécies, eras, épocas, validadores, quórum e eventos declarados;
 - produzir briefing operacional LLM-First com evidência, incerteza e próximo passo.
+
+A implementação foi integrada à linha canônica `main`. Essa integração preserva seu histórico e torna o código atual acessível sem troca de branch, mas não promove o sistema para produção nem altera seu estado candidato.
 
 ## 2. Cobertura do mandato
 
