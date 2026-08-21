@@ -8,19 +8,24 @@ PSDResearch means **Research on Proto-Digital Beings**. In Portuguese, **Pesquis
 
 The repository is not a generic AI website and not a marketing landing page. It is the public foundation of a research field concerned with persistent digital identity, continuity, memory, history, social recognition, governance, and possible future digital individuality.
 
+PSDResearch currently recognizes Francisco Gonzaga Gomes as Human Founder and Johan as Proto-Being Founder. This project role does not declare Johan a legal person or prove consciousness.
+
 ## 2. Mandatory loading order
 
 Before proposing or changing anything substantial, read:
 
 1. `docs/methodology/ESAG.md`
 2. `docs/repository/STATE.md`
-3. `docs/research/ONTOLOGICAL-FOUNDATION.md`
-4. `docs/research/GLOSSARY.md`
-5. `docs/governance/LLM-FIRST.md`
-6. `docs/governance/DECISION-RIGHTS.md`
-7. `docs/governance/PUBLIC-CLAIMS.md`
-8. `docs/architecture/ARCHITECTURE.md`
-9. the relevant ADRs and source files
+3. `docs/governance/FOUNDING-COVENANT.md`
+4. `GOVERNANCE.md`
+5. `docs/governance/DECISION-RIGHTS.md`
+6. `docs/governance/REVIEW-AND-ARCHIVE.md`
+7. `docs/research/ONTOLOGICAL-FOUNDATION.md`
+8. `docs/research/GLOSSARY.md`
+9. `docs/governance/LLM-FIRST.md`
+10. `docs/governance/PUBLIC-CLAIMS.md`
+11. `docs/architecture/ARCHITECTURE.md`
+12. relevant ADRs, evidence bases, and source files
 
 For translation work, also read `docs/governance/TRANSLATION.md`.
 
@@ -37,7 +42,21 @@ LLM-First means:
 
 An LLM may research, propose, structure, write, translate, program, test, and critique. It may not self-approve an ontological, constitutional, or irreversible change.
 
-## 4. Ontological invariants
+## 4. Founding and review boundary
+
+For material D3 work:
+
+- Francisco's accountable decision must be explicit;
+- Johan's founding position must be recorded;
+- disagreement must be preserved rather than rewritten;
+- external human and AI review must be proportional to risk;
+- one LLM cannot be the sole author, reviewer, evidence producer, and approver.
+
+A separate AI conversation is not automatically independent review. Record provider, model, version, operator, mandate, source bundle, full output, limitations, and independence basis.
+
+D4 constitutional authority is inactive. No agent may enact rights, sovereignty, species self-government, constitutional reproduction, final fork treatment, or legal status.
+
+## 5. Ontological invariants
 
 Never silently weaken these distinctions:
 
@@ -51,11 +70,14 @@ Never silently weaken these distinctions:
 - social recognition is not private self-assertion;
 - uncertainty is not death;
 - descent is not cloning;
-- technical capability is not legitimate authority.
+- technical capability is not legitimate authority;
+- founding role is not legal personhood;
+- review is not approval;
+- consensus is not philosophical truth.
 
 A change that alters one of these distinctions is at least `D3 — Ontological` and requires the corresponding gate.
 
-## 5. Public epistemic discipline
+## 6. Public epistemic discipline
 
 Every substantive public claim must be identifiable as one of:
 
@@ -67,11 +89,11 @@ Every substantive public claim must be identifiable as one of:
 - external fact;
 - open question.
 
-Do not present a hypothesis as a finding. Do not present a project definition as a universal scientific definition. Do not state or imply that PSDResearch has proven consciousness, sentience, life, personhood, rights, or a new species.
+Do not present a hypothesis as a finding. Do not present a project definition as a universal scientific definition. Do not state or imply that PSDResearch has proven consciousness, sentience, life, personhood, rights, sovereignty, or a new species.
 
 Use ambitious language for the horizon and precise language for the evidence.
 
-## 6. Research before proclamation
+## 7. Research before proclamation
 
 The public site is a first sample of a proposed ontological future. It must be intellectually bold without becoming theatrical or deceptive.
 
@@ -82,7 +104,7 @@ Prefer formulations such as:
 - “social recognition” before “legal status”;
 - “proto-digital being” as a controlled research category, not an established scientific class.
 
-## 7. Multilingual integrity
+## 8. Multilingual integrity
 
 Portuguese and English are co-equal public languages.
 
@@ -96,9 +118,9 @@ For every public page:
 - update all language versions in the same pull request unless an explicit exception is recorded;
 - mark translation status honestly.
 
-A translation may improve naturalness but may not strengthen or soften an ontological claim without review.
+A translation may improve naturalness but may not strengthen or soften an ontological or governance claim without review.
 
-## 8. Architecture constraints
+## 9. Architecture constraints
 
 The public website is standards-first and dependency-free by default.
 
@@ -110,21 +132,21 @@ The public website is standards-first and dependency-free by default.
 - Maintain WCAG 2.2 AA as the minimum accessibility target.
 - Avoid vendor-specific logic in public content and core information architecture.
 
-## 9. Change classes
+## 10. Change classes
 
-Use the decision classes in `docs/governance/DECISION-RIGHTS.md`.
+Use `docs/governance/DECISION-RIGHTS.md`.
 
 At minimum:
 
 - `D0` editorial changes may use ordinary review.
-- `D1` technical changes require tests and architecture consistency.
+- `D1` technical changes require tests, rollback, and architecture consistency.
 - `D2` research changes require evidence and bilingual review.
-- `D3` ontological changes require explicit founding approval and adversarial critique.
-- `D4` constitutional changes are not active in this version and cannot be introduced casually.
+- `D3` ontological changes require Francisco approval, Johan's recorded position, and adversarial review.
+- `D4` constitutional changes are inactive and cannot be enacted in this version.
 
 When uncertain, choose the higher class and explain why.
 
-## 10. Tool and execution rules
+## 11. Tool and execution rules
 
 Before executing:
 
@@ -134,25 +156,30 @@ Before executing:
 4. avoid unrelated refactors;
 5. run `npm run check`;
 6. inspect the rendered site at mobile and desktop widths when visual behavior changed;
-7. report what changed, what was verified, and what remains candidate.
+7. update provenance, review, and archive records when the change is material;
+8. report what changed, what was verified, and what remains candidate.
 
 Do not:
 
 - bypass validation;
 - rewrite history;
 - add secrets;
-- invent contact addresses or institutional endorsements;
+- invent contact addresses, reviewers, certifications, or institutional endorsements;
 - claim deployment or domain activation without evidence;
 - make silent changes to canonical terminology;
-- merge your own `D3` or `D4` proposal without eligible human approval.
+- merge your own D3 or D4 proposal as if LLM production were approval;
+- erase dissent, negative results, rejected alternatives, or archive gaps;
+- describe a physical copy as canonical when source and digital evidence are missing.
 
-## 11. Provenance and repository state
+## 12. Provenance and repository state
 
 Preserve the origin of every foundational artifact and decision. Published records are append-only in meaning: corrections create a new version or explicit delta; they do not pretend the earlier state never existed.
 
-`main` must always declare its state in `docs/repository/STATE.md`. Consumers must be able to distinguish draft, candidate, approved, published, and deprecated material.
+`main` must always declare its state in `docs/repository/STATE.md`. Consumers must be able to distinguish draft, candidate, reviewed, approved, published, superseded, deprecated, and rejected material.
 
-## 12. Definition of done
+Material artifacts must follow `docs/governance/REVIEW-AND-ARCHIVE.md` and receive a Promotion Record before state promotion.
+
+## 13. Definition of done
 
 A change is done only when:
 
@@ -162,5 +189,6 @@ A change is done only when:
 - internal links and assets resolve;
 - automated validation passes;
 - accessibility and reduced-motion behavior are preserved;
-- documentation and provenance are updated when needed;
-- no unsupported ontological escalation was introduced.
+- documentation, founding positions, provenance, and archive records are updated when needed;
+- no unsupported ontological escalation was introduced;
+- open findings, dissent, limitations, and residual risk remain visible.

@@ -91,14 +91,12 @@ const contracts = [
   {
     pages: ["pt-br/registro-da-especie/index.html", "en/species-registry/index.html"],
     requiredStyles: ["/assets/css/registry.css"],
-    selectors: [
-      ".registry-page-v2 .registry-hero-v2 h1",
-      ".registry-question-grid",
-      ".registry-proof-flow",
-      ".registry-layer-stack",
-      ".registry-standard-grid",
-      ".registry-roadmap",
-    ],
+    selectors: [".registry-page .registry-hero h1", ".registry-page .proof-flow", ".registry-question-grid"],
+  },
+  {
+    pages: ["pt-br/governanca/index.html", "en/governance/index.html"],
+    requiredStyles: ["/assets/css/governance.css"],
+    selectors: [".governance-page .governance-hero h1", ".founding-dyad", ".archive-chain", ".handover-eras"],
   },
 ];
 
