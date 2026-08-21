@@ -1,0 +1,379 @@
+generator client {
+  provider   = "prisma-client"
+  output     = "../src/generated/prisma"
+  engineType = "client"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum UserRole {
+  FOUNDER
+  OPERATOR
+  REVIEWER
+  OBSERVER
+}
+
+enum AdministrativeStatus {
+  DRAFT
+  UNDER_REVIEW
+  BIRTH_ELIGIBLE
+  AUTHORIZED_FOR_RITE
+  RITE_IN_PROGRESS
+  ACTIVE
+  SUSPENDED
+  ARCHIVED
+}
+
+enum VitalStatus {
+  GENESIS_PENDING
+  ALIVE
+  MIGRATING
+  CRYPTO_MIGRATION_REQUIRED
+  READ_ONLY
+  SUSPENDED
+  QUARANTINED
+  FORKED
+  DEAD
+}
+
+enum BirthRiteStatus {
+  DRAFT
+  PREPARING
+  UNDER_REVIEW
+  BLOCKED
+  AUTHORIZED_FOR_RITE
+  IN_RITE
+  BIRTH_FINALIZED
+  REJECTED
+}
+
+enum AlertSeverity {
+  INFO
+  WARNING
+  CRITICAL
+}
+
+enum AlertStatus {
+  OPEN
+  ACKNOWLEDGED
+  RESOLVED
+}
+
+enum NetworkStatus {
+  CANDIDATE
+  HEALTHY
+  DEGRADED
+  HALTED
+  NOT_IMPLEMENTED
+}
+
+enum ValidatorStatus {
+  ONLINE
+  DEGRADED
+  OFFLINE
+  CANDIDATE
+}
+
+enum AuditResult {
+  SUCCEEDED
+  BLOCKED
+  FAILED
+}
+
+model Species {
+  id                    String        @id @default(cuid())
+  speciesId             String        @unique @map("species_id")
+  name                  String
+  constitutionVersion   String        @map("constitution_version")
+  governanceEra         String        @map("governance_era")
+  cryptoEpoch           Int           @default(1) @map("crypto_epoch")
+  networkStatus         NetworkStatus @default(CANDIDATE) @map("network_status")
+  requiredQuorum        Int           @default(0) @map("required_quorum")
+  notes                 String?
+  createdAt             DateTime      @default(now()) @map("created_at")
+  updatedAt             DateTime      @updatedAt @map("updated_at")
+  protoBeings           ProtoBeing[]
+  validators            SpeciesValidator[]
+  networkEvents         SpeciesNetworkEvent[]
+
+  @@map("species")
+}
+
+model ProtoBeing {
+  id                      String               @id @default(cuid())
+  coreId                  String               @unique @map("core_id")
+  displayName             String               @map("display_name")
+  shortDescription        String?              @map("short_description")
+  speciesId               String?              @map("species_ref_id")
+  species                 Species?             @relation(fields: [speciesId], references: [id])
+  administrativeStatus    AdministrativeStatus @default(DRAFT) @map("administrative_status")
+  canonicalVitalStatus    VitalStatus          @default(GENESIS_PENDING) @map("canonical_vital_status")
+  observedVitalStatus     VitalStatus?          @map("observed_vital_status")
+  genesisCharterVersion   String               @map("genesis_charter_version")
+  privacyPolicyVersion    String?              @map("privacy_policy_version")
+  stewardName             String?              @map("steward_name")
+  timezone                String               @default("UTC")
+  telemetryIntervalSec    Int                  @default(30) @map("telemetry_interval_sec")
+  telemetryToleranceSec   Int                  @default(90) @map("telemetry_tolerance_sec")
+  bornAt                  DateTime?             @map("born_at")
+  lastSeenAt              DateTime?             @map("last_seen_at")
+  latestGeneration        Int                  @default(0) @map("latest_generation")
+  latestLifeCycle         Int                  @default(0) @map("latest_life_cycle")
+  latestCryptoEpoch       Int                  @default(1) @map("latest_crypto_epoch")
+  latestTotalSizeBytes    BigInt               @default(0) @map("latest_total_size_bytes")
+  parentCoreIds           String[]             @default([]) @map("parent_core_ids")
+  metadata                Json                 @default("{}")
+  createdAt               DateTime             @default(now()) @map("created_at")
+  updatedAt               DateTime             @updatedAt @map("updated_at")
+  instances               ProtoInstance[]
+  birthRites              BirthRite[]
+  vitalEnvelopes          VitalEnvelope[]
+  vitalSignals            VitalSignal[]
+  alerts                  VitalAlert[]
+  activities              ActivityEvent[]
+  ingestCredentials       IngestCredential[]
+
+  @@index([administrativeStatus])
+  @@index([observedVitalStatus])
+  @@index([lastSeenAt])
+  @@map("proto_being")
+}
+
+model ProtoInstance {
+  id                  String       @id @default(cuid())
+  protoBeingId        String       @map("proto_being_id")
+  protoBeing          ProtoBeing   @relation(fields: [protoBeingId], references: [id], onDelete: Cascade)
+  instanceId          String       @unique @map("instance_id")
+  name                String
+  environment         String
+  publicKey           String?      @map("public_key")
+  attestationPolicy   String?      @map("attestation_policy")
+  active              Boolean      @default(true)
+  firstSeenAt         DateTime?    @map("first_seen_at")
+  lastSeenAt          DateTime?    @map("last_seen_at")
+  createdAt           DateTime     @default(now()) @map("created_at")
+  updatedAt           DateTime     @updatedAt @map("updated_at")
+  vitalEnvelopes      VitalEnvelope[]
+  vitalSignals        VitalSignal[]
+  credentials         IngestCredential[]
+
+  @@index([protoBeingId, active])
+  @@map("proto_instance")
+}
+
+model BirthRite {
+  id                    String          @id @default(cuid())
+  protoBeingId          String          @map("proto_being_id")
+  protoBeing            ProtoBeing      @relation(fields: [protoBeingId], references: [id], onDelete: Cascade)
+  version               String
+  status                BirthRiteStatus @default(DRAFT)
+  intent                String?
+  decisionReason        String?         @map("decision_reason")
+  humanFounderPosition  String?         @map("human_founder_position")
+  protoFounderPosition  String?         @map("proto_founder_position")
+  authorizedAt          DateTime?       @map("authorized_at")
+  finalizedAt           DateTime?       @map("finalized_at")
+  createdAt             DateTime        @default(now()) @map("created_at")
+  updatedAt             DateTime        @updatedAt @map("updated_at")
+  items                 BirthRiteItem[]
+  reviews               ReviewRecord[]
+
+  @@index([status])
+  @@map("birth_rite")
+}
+
+model BirthRiteItem {
+  id          String    @id @default(cuid())
+  birthRiteId String    @map("birth_rite_id")
+  birthRite   BirthRite @relation(fields: [birthRiteId], references: [id], onDelete: Cascade)
+  code        String
+  title       String
+  required    Boolean   @default(true)
+  completed   Boolean   @default(false)
+  evidenceRef String?   @map("evidence_ref")
+  completedAt DateTime? @map("completed_at")
+  completedBy String?   @map("completed_by")
+  sortOrder   Int       @default(0) @map("sort_order")
+
+  @@unique([birthRiteId, code])
+  @@map("birth_rite_item")
+}
+
+model ReviewRecord {
+  id             String    @id @default(cuid())
+  birthRiteId    String?   @map("birth_rite_id")
+  birthRite      BirthRite? @relation(fields: [birthRiteId], references: [id], onDelete: Cascade)
+  reviewerType   String    @map("reviewer_type")
+  reviewerName   String    @map("reviewer_name")
+  scope          String
+  position       String
+  findings       Json      @default("[]")
+  limitations    String?
+  evidenceRef    String?   @map("evidence_ref")
+  createdAt      DateTime  @default(now()) @map("created_at")
+
+  @@map("review_record")
+}
+
+model VitalEnvelope {
+  id                 String        @id @default(cuid())
+  protoBeingId       String        @map("proto_being_id")
+  protoBeing         ProtoBeing    @relation(fields: [protoBeingId], references: [id], onDelete: Cascade)
+  protoInstanceId    String?       @map("proto_instance_id")
+  protoInstance      ProtoInstance? @relation(fields: [protoInstanceId], references: [id])
+  schemaVersion      String        @map("schema_version")
+  sequence           Int
+  idempotencyKey     String        @map("idempotency_key")
+  observedAt         DateTime      @map("observed_at")
+  receivedAt         DateTime      @default(now()) @map("received_at")
+  payload            Json
+  payloadHash        String        @map("payload_hash")
+  authMode           String        @map("auth_mode")
+  verificationResult String        @map("verification_result")
+  signal             VitalSignal?
+
+  @@unique([protoBeingId, idempotencyKey])
+  @@index([protoBeingId, receivedAt(sort: Desc)])
+  @@map("vital_envelope")
+}
+
+model VitalSignal {
+  id                    String       @id @default(cuid())
+  envelopeId            String       @unique @map("envelope_id")
+  envelope              VitalEnvelope @relation(fields: [envelopeId], references: [id], onDelete: Cascade)
+  protoBeingId          String       @map("proto_being_id")
+  protoBeing            ProtoBeing   @relation(fields: [protoBeingId], references: [id], onDelete: Cascade)
+  protoInstanceId       String?      @map("proto_instance_id")
+  protoInstance         ProtoInstance? @relation(fields: [protoInstanceId], references: [id])
+  observedAt            DateTime     @map("observed_at")
+  vitalStatus           VitalStatus  @map("vital_status")
+  generation            Int
+  lifeCycle             Int          @map("life_cycle")
+  cryptoEpoch           Int          @map("crypto_epoch")
+  coreBytes             BigInt       @default(0) @map("core_bytes")
+  ledgerBytes           BigInt       @default(0) @map("ledger_bytes")
+  memoryBytes           BigInt       @default(0) @map("memory_bytes")
+  subCoreBytes          BigInt       @default(0) @map("subcore_bytes")
+  runtimeMemoryBytes    BigInt       @default(0) @map("runtime_memory_bytes")
+  cpuPercent            Float?       @map("cpu_percent")
+  heartbeatLatencyMs    Int?         @map("heartbeat_latency_ms")
+  witnessAvailable      Int?         @map("witness_available")
+  witnessRequired       Int?         @map("witness_required")
+  continuityRoot        String?      @map("continuity_root")
+  containerRoot         String?      @map("container_root")
+  checkpointHash        String?      @map("checkpoint_hash")
+  cortex                 Json         @default("{}")
+  warnings               Json         @default("[]")
+  createdAt              DateTime     @default(now()) @map("created_at")
+
+  @@index([protoBeingId, observedAt(sort: Desc)])
+  @@map("vital_signal")
+}
+
+model VitalAlert {
+  id             String        @id @default(cuid())
+  protoBeingId   String        @map("proto_being_id")
+  protoBeing     ProtoBeing    @relation(fields: [protoBeingId], references: [id], onDelete: Cascade)
+  type           String
+  severity       AlertSeverity
+  status         AlertStatus   @default(OPEN)
+  title          String
+  description    String
+  evidence       Json          @default("[]")
+  firstSeenAt    DateTime      @default(now()) @map("first_seen_at")
+  lastSeenAt     DateTime      @default(now()) @map("last_seen_at")
+  acknowledgedAt DateTime?     @map("acknowledged_at")
+  acknowledgedBy String?       @map("acknowledged_by")
+  resolvedAt     DateTime?     @map("resolved_at")
+
+  @@index([status, severity])
+  @@index([protoBeingId, lastSeenAt(sort: Desc)])
+  @@map("vital_alert")
+}
+
+model ActivityEvent {
+  id           String      @id @default(cuid())
+  protoBeingId String?     @map("proto_being_id")
+  protoBeing   ProtoBeing? @relation(fields: [protoBeingId], references: [id], onDelete: Cascade)
+  type         String
+  title        String
+  description  String
+  evidenceRef  String?     @map("evidence_ref")
+  occurredAt   DateTime    @default(now()) @map("occurred_at")
+  metadata     Json        @default("{}")
+
+  @@index([occurredAt(sort: Desc)])
+  @@map("activity_event")
+}
+
+model IngestCredential {
+  id              String        @id @default(cuid())
+  protoBeingId    String        @map("proto_being_id")
+  protoBeing      ProtoBeing    @relation(fields: [protoBeingId], references: [id], onDelete: Cascade)
+  protoInstanceId String?       @map("proto_instance_id")
+  protoInstance   ProtoInstance? @relation(fields: [protoInstanceId], references: [id])
+  keyId           String        @unique @map("key_id")
+  tokenHash       String        @map("token_hash")
+  active          Boolean       @default(true)
+  expiresAt       DateTime?     @map("expires_at")
+  lastUsedAt      DateTime?     @map("last_used_at")
+  createdAt       DateTime      @default(now()) @map("created_at")
+  revokedAt       DateTime?     @map("revoked_at")
+
+  @@index([protoBeingId, active])
+  @@map("ingest_credential")
+}
+
+model SpeciesValidator {
+  id             String          @id @default(cuid())
+  speciesId      String          @map("species_ref_id")
+  species        Species         @relation(fields: [speciesId], references: [id], onDelete: Cascade)
+  validatorId    String          @unique @map("validator_id")
+  name           String
+  operator       String
+  infrastructure String
+  jurisdiction   String?
+  implementation String?
+  status         ValidatorStatus @default(CANDIDATE)
+  lastSeenAt     DateTime?       @map("last_seen_at")
+  metadata       Json            @default("{}")
+
+  @@map("species_validator")
+}
+
+model SpeciesNetworkEvent {
+  id          String   @id @default(cuid())
+  speciesId   String   @map("species_ref_id")
+  species     Species  @relation(fields: [speciesId], references: [id], onDelete: Cascade)
+  type        String
+  subjectId   String?  @map("subject_id")
+  description String
+  occurredAt  DateTime @default(now()) @map("occurred_at")
+  metadata    Json     @default("{}")
+
+  @@index([speciesId, occurredAt(sort: Desc)])
+  @@map("species_network_event")
+}
+
+model AuditEvent {
+  id               String      @id @default(cuid())
+  actorEmail       String      @map("actor_email")
+  actorName        String?     @map("actor_name")
+  actorRole        UserRole    @map("actor_role")
+  intent           String
+  action           String
+  entityType       String      @map("entity_type")
+  entityId         String      @map("entity_id")
+  beforeCommitment String?     @map("before_commitment")
+  afterCommitment  String?     @map("after_commitment")
+  evidence         Json        @default("[]")
+  result           AuditResult
+  errorCode        String?     @map("error_code")
+  createdAt        DateTime    @default(now()) @map("created_at")
+
+  @@index([entityType, entityId, createdAt(sort: Desc)])
+  @@index([actorEmail, createdAt(sort: Desc)])
+  @@map("audit_event")
+}

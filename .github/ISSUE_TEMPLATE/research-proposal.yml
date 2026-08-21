@@ -1,0 +1,47 @@
+name: Research proposal
+description: Propose a source, hypothesis, method, definition, or research line.
+title: "[Research]: "
+labels: ["research"]
+body:
+  - type: dropdown
+    id: claim
+    attributes:
+      label: Epistemic type
+      options:
+        - Source-derived statement
+        - Working definition
+        - Hypothesis
+        - Design proposal
+        - Project evidence
+        - Open question
+    validations:
+      required: true
+  - type: dropdown
+    id: class
+    attributes:
+      label: Decision class
+      options:
+        - D2 — Research
+        - D3 — Ontological
+        - D4 — Constitutional
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: State the proposition and why it matters.
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources and evidence
+      description: Prefer primary sources and identify uncertainty.
+    validations:
+      required: true
+  - type: textarea
+    id: counterexamples
+    attributes:
+      label: Counterexamples and risks
+      description: What could make this wrong, misleading, or harmful?

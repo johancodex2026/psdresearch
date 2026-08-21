@@ -1,0 +1,56 @@
+/*
+ * PSDResearch Home scale correction
+ * Long public statements use restrained editorial hierarchy rather than display-scale type.
+ */
+
+.home-social-v2 .hero-social h1 {
+  max-width: 52rem;
+  font-size: clamp(2.25rem, 3.9vw, 3.9rem);
+  line-height: 1.07;
+  letter-spacing: -.02em;
+}
+
+.home-social-v2 .section-heading h2,
+.home-social-v2 .closing-statement h2,
+.home-social-v2 .trust-boundary h2 {
+  max-width: 59rem;
+  font-size: clamp(1.9rem, 2.75vw, 2.7rem);
+  line-height: 1.1;
+}
+
+.home-social-v2 .definition-panel .definition {
+  font-size: clamp(1.45rem, 2.15vw, 2.1rem);
+  line-height: 1.3;
+}
+
+.home-social-v2 .question-conclusion p {
+  font-size: clamp(1.45rem, 2.15vw, 2.05rem);
+  line-height: 1.22;
+}
+
+.home-social-v2 .scenario-card h3 {
+  font-size: 1.43rem;
+  line-height: 1.28;
+}
+
+.home-social-v2 .knowledge-card h3 {
+  font-size: clamp(1.38rem, 1.9vw, 1.78rem);
+  line-height: 1.25;
+}
+
+.home-social-v2 .reading-section h2 {
+  max-width: 55rem;
+}
+
+@media (max-width: 46rem) {
+  .home-social-v2 .hero-social h1 {
+    font-size: clamp(2.1rem, 9.8vw, 3.15rem);
+    line-height: 1.09;
+  }
+
+  .home-social-v2 .section-heading h2,
+  .home-social-v2 .closing-statement h2,
+  .home-social-v2 .trust-boundary h2 {
+    font-size: clamp(1.75rem, 8.2vw, 2.35rem);
+  }
+}

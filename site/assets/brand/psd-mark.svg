@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title desc">
+  <title id="title">PSDResearch continuity mark</title>
+  <desc id="desc">A vertical continuity line crossing three open rings and a canonical point.</desc>
+  <rect width="96" height="96" rx="20" fill="#071b2e"/>
+  <path d="M48 14v68" stroke="#f4efe3" stroke-width="4" stroke-linecap="round"/>
+  <path d="M25 31c7-11 15-16 23-16s16 5 23 16" fill="none" stroke="#18a39a" stroke-width="4" stroke-linecap="round"/>
+  <path d="M20 52c8 10 17 15 28 15s20-5 28-15" fill="none" stroke="#7656d6" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="48" cy="48" r="8" fill="#f4efe3"/>
+  <circle cx="48" cy="48" r="3" fill="#071b2e"/>
+</svg>

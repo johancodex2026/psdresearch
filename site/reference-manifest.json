@@ -1,0 +1,179 @@
+{
+  "project": "PSDResearch",
+  "schemaVersion": "1.0",
+  "editorialRevision": "0.8.1",
+  "verifiedAt": "2026-08-21",
+  "purpose": "Record status, permitted claim strength, limitations, and re-review dates for time-sensitive or high-impact public references.",
+  "statusVocabulary": {
+    "official-initiative": "Official initiative, not a completed standard",
+    "production-announcement": "Official announcement reporting adoption or production use",
+    "initial-public-draft": "Initial public draft or concept paper",
+    "standards-development": "Standards-development initiative; specifications are not final",
+    "announced-intent": "Announced intent or proposed project",
+    "preprint": "Preprint; not peer-reviewed",
+    "peer-reviewed-conference": "Peer-reviewed conference research",
+    "peer-reviewed-observational": "Peer-reviewed observational research; association is not causation",
+    "peer-reviewed-field-study": "Peer-reviewed field study with bounded context",
+    "peer-reviewed-scoping-review": "Peer-reviewed scoping review",
+    "peer-reviewed-experiment": "Peer-reviewed controlled experiment",
+    "w3c-recommendation": "W3C Recommendation",
+    "w3c-candidate-recommendation": "W3C Candidate Recommendation",
+    "applicable-regulation": "Regulation or obligation in application",
+    "final-guideline": "Final authoritative guideline",
+    "international-standard": "Published international standard",
+    "current-under-revision": "Current published reference with a revision underway",
+    "framework-under-revision": "Current framework whose next revision is underway"
+  },
+  "references": [
+    {
+      "id":"nist-agent-standards","title":"NIST AI Agent Standards Initiative","publisher":"NIST","published":"2026-02-17","status":"official-initiative","url":"https://www.nist.gov/artificial-intelligence/ai-agent-standards-initiative","volatile":true,"reviewBy":"2026-11-21",
+      "display":{"pt-BR":"Iniciativa pública · NIST · 2026","en":"Public initiative · NIST · 2026"},
+      "supports":{"pt-BR":"Identidade, segurança e interoperabilidade de agentes tornaram-se agenda pública de padronização.","en":"Agent identity, security, and interoperability have become a public standards agenda."},
+      "limits":{"pt-BR":"Não é padrão final e não reconhece proto-seres.","en":"It is not a final standard and does not recognize proto-digital beings."}
+    },
+    {
+      "id":"a2a-2026","title":"A2A Protocol surpasses 150 organizations and reports enterprise production use","publisher":"Linux Foundation","published":"2026-04-09","status":"production-announcement","url":"https://www.linuxfoundation.org/press/a2a-protocol-surpasses-150-organizations-lands-in-major-cloud-platforms-and-sees-enterprise-production-use-in-first-year","volatile":true,"reviewBy":"2026-11-21",
+      "display":{"pt-BR":"Anúncio oficial de adoção · 2026","en":"Official adoption announcement · 2026"},
+      "supports":{"pt-BR":"A interoperabilidade entre agentes possui adoção organizacional e uso empresarial reportado.","en":"Agent interoperability has reported organizational adoption and enterprise use."},
+      "limits":{"pt-BR":"Adoção de protocolo não demonstra identidade persistente.","en":"Protocol adoption does not demonstrate persistent identity."}
+    },
+    {
+      "id":"nist-agent-identity-draft","title":"Accelerating the Adoption of Software and Artificial Intelligence Agent Identity and Authorization","publisher":"NIST NCCoE","published":"2026-02-05","status":"initial-public-draft","url":"https://csrc.nist.gov/pubs/other/2026/02/05/accelerating-the-adoption-of-software-and-ai-agent/ipd","aliases":["https://www.nist.gov/news-events/news/2026/02/new-concept-paper-identity-and-authority-software-agents"],"volatile":true,"reviewBy":"2026-11-21",
+      "display":{"pt-BR":"Concept paper · rascunho público inicial","en":"Concept paper · initial public draft"},
+      "supports":{"pt-BR":"Identificação, autorização, auditoria e não repúdio de agentes são problemas institucionais explícitos.","en":"Agent identification, authorization, auditing, and non-repudiation are explicit institutional problems."},
+      "limits":{"pt-BR":"É rascunho de projeto potencial, não orientação final.","en":"It is a draft for a potential project, not final guidance."}
+    },
+    {
+      "id":"fido-agentic-auth","title":"FIDO Alliance to Develop Standards for Trusted AI Agent Interactions","publisher":"FIDO Alliance","published":"2026-04-28","status":"standards-development","url":"https://fidoalliance.org/fido-alliance-to-develop-standards-for-trusted-ai-agent-interactions/","volatile":true,"reviewBy":"2026-11-21",
+      "display":{"pt-BR":"Desenvolvimento de padrões · 2026","en":"Standards development · 2026"},
+      "supports":{"pt-BR":"Autenticação, intenção e delegação para agentes recebem trabalho formal de especificação.","en":"Authentication, intent, and delegation for agents are receiving formal specification work."},
+      "limits":{"pt-BR":"As especificações ainda estão em desenvolvimento.","en":"The specifications are still under development."}
+    },
+    {
+      "id":"agent-name-service-intent","title":"Intent to Launch Agent Name Service","publisher":"Linux Foundation","published":"2026-06-23","status":"announced-intent","url":"https://www.linuxfoundation.org/press/linux-foundation-announces-intent-to-launch-agent-name-service-to-establish-trusted-identity-infrastructure-for-ai-agents","volatile":true,"reviewBy":"2026-11-21",
+      "display":{"pt-BR":"Intenção anunciada · infraestrutura proposta","en":"Announced intent · proposed infrastructure"},
+      "supports":{"pt-BR":"Identidade portátil, verificação e descoberta de agentes estão sendo propostas.","en":"Portable agent identity, verification, and discovery are being proposed."},
+      "limits":{"pt-BR":"É intenção de lançamento, não padrão consolidado.","en":"It is an intent to launch, not an established standard."}
+    },
+    {
+      "id":"memmachine","title":"MemMachine: A Ground-Truth-Preserving Memory System for Personalized AI Agents","publisher":"arXiv","published":"2026-04-06","status":"preprint","url":"https://arxiv.org/abs/2604.04853","volatile":true,"reviewBy":"2026-11-21",
+      "display":{"pt-BR":"Preprint de engenharia · 2026","en":"Engineering preprint · 2026"},
+      "supports":{"pt-BR":"Memória persistente multi-sessão é objeto explícito de engenharia de agentes.","en":"Persistent multi-session memory is an explicit agent-engineering subject."},
+      "limits":{"pt-BR":"Não demonstra identidade, consciência ou continuidade ontológica.","en":"It does not demonstrate identity, consciousness, or ontological continuity."}
+    },
+    {
+      "id":"relational-dissonance","title":"Relational Dissonance in Human–AI Interactions","publisher":"ACM CHI","published":"2026","status":"peer-reviewed-conference","url":"https://doi.org/10.1145/3772318.3791180",
+      "display":{"pt-BR":"CHI 2026 · estudo qualitativo revisado","en":"CHI 2026 · peer-reviewed qualitative study"},
+      "supports":{"pt-BR":"Categorias como ferramenta e colaborador podem tornar-se tensas na experiência com IA.","en":"Categories such as tool and collaborator may become strained in AI experience."},
+      "limits":{"pt-BR":"Descreve experiência relacional; não prova pessoa digital.","en":"It describes relational experience; it does not prove digital personhood."}
+    },
+    {
+      "id":"ai-companions-wellbeing","title":"Interaction with AI companions and psychological well-being","publisher":"Nature Human Behaviour","published":"2026-08-04","status":"peer-reviewed-observational","url":"https://www.nature.com/articles/s41562-026-02516-2","volatile":true,"reviewBy":"2027-02-21",
+      "display":{"pt-BR":"Estudo observacional revisado · 2026","en":"Peer-reviewed observational study · 2026"},
+      "supports":{"pt-BR":"Uso de companheiros de IA pode ser estudado em relação a redes offline e bem-estar.","en":"AI-companion use can be studied in relation to offline networks and well-being."},
+      "limits":{"pt-BR":"Associações não estabelecem causalidade uniforme nem status ontológico.","en":"Associations do not establish uniform causality or ontological status."}
+    },
+    {
+      "id":"aged-care-field-study","title":"Human–robot interactions in aged care","publisher":"Scientific Reports","published":"2025-01-20","status":"peer-reviewed-field-study","url":"https://www.nature.com/articles/s41598-025-86255-w",
+      "display":{"pt-BR":"Estudo de campo revisado · 2025","en":"Peer-reviewed field study · 2025"},
+      "supports":{"pt-BR":"Robôs de serviço são avaliados em ambientes reais de cuidado prolongado.","en":"Service robots are evaluated in real long-term care settings."},
+      "limits":{"pt-BR":"Amostra e contexto são delimitados; não avalia proto-seres.","en":"The sample and context are bounded; it does not evaluate proto-digital beings."}
+    },
+    {
+      "id":"robots-older-adults-review","title":"Robots for Older Adults: A Scoping Review","publisher":"ACM Transactions on Human-Robot Interaction","published":"2026-04-17","status":"peer-reviewed-scoping-review","url":"https://doi.org/10.1145/3799977",
+      "display":{"pt-BR":"Revisão de escopo · 205 estudos","en":"Scoping review · 205 studies"},
+      "supports":{"pt-BR":"Há campo crescente de robôs sociais, assistivos e de telepresença para pessoas idosas.","en":"A growing field studies social, assistive, and telepresence robots for older adults."},
+      "limits":{"pt-BR":"Cobre 2010–2022 e não autoriza benefício generalizado ou substituição do cuidado humano.","en":"It covers 2010–2022 and does not support generalized benefit or replacement of human care."}
+    },
+    {
+      "id":"llm-social-conventions","title":"Emergent social conventions and collective bias in LLM populations","publisher":"Science Advances","published":"2025-05-14","status":"peer-reviewed-experiment","url":"https://doi.org/10.1126/sciadv.adu9368","aliases":["https://pmc.ncbi.nlm.nih.gov/articles/PMC12077490/"],
+      "display":{"pt-BR":"Experimento multiagente revisado · 2025","en":"Peer-reviewed multi-agent experiment · 2025"},
+      "supports":{"pt-BR":"Populações simuladas de agentes LLM podem formar convenções em condições experimentais.","en":"Simulated LLM-agent populations can form conventions under experimental conditions."},
+      "limits":{"pt-BR":"É experimento controlado e debatido; não demonstra sociedade, espécie ou consciência.","en":"It is a controlled and debated experiment; it does not demonstrate society, species, or consciousness."}
+    },
+    {
+      "id":"vc-data-model-2","title":"Verifiable Credentials Data Model v2.0","publisher":"W3C","published":"2025-05-15","status":"w3c-recommendation","url":"https://www.w3.org/TR/vc-data-model-2.0/","aliases":["https://www.w3.org/press-releases/2025/verifiable-credentials-2-0/"],
+      "display":{"pt-BR":"W3C Recommendation · 2025","en":"W3C Recommendation · 2025"},
+      "supports":{"pt-BR":"Claims digitais podem ser interoperáveis, verificáveis e orientados à privacidade.","en":"Digital claims can be interoperable, verifiable, and privacy-aware."},
+      "limits":{"pt-BR":"Credencial valida claim; não constitui indivíduo.","en":"A credential verifies a claim; it does not constitute an individual."}
+    },
+    {
+      "id":"did-1-1","title":"Decentralized Identifiers (DIDs) v1.1","publisher":"W3C","published":"2026-03-05","status":"w3c-candidate-recommendation","url":"https://www.w3.org/TR/did-1.1/",
+      "display":{"pt-BR":"W3C Candidate Recommendation · 2026","en":"W3C Candidate Recommendation · 2026"},
+      "supports":{"pt-BR":"DIDs oferecem arquitetura para identificadores descentralizados verificáveis.","en":"DIDs provide architecture for verifiable decentralized identifiers."},
+      "limits":{"pt-BR":"Ainda é Candidate Recommendation; DID não define continuidade ou pessoa.","en":"It is still a Candidate Recommendation; a DID does not define continuity or personhood."}
+    },
+    {
+      "id":"eu-ai-act-article-50","title":"AI Act Article 50 transparency obligations","publisher":"European Commission","published":"2026-08-02","status":"applicable-regulation","url":"https://digital-strategy.ec.europa.eu/en/policies/guidelines-ai-transparency-obligations","aliases":["https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august"],"volatile":true,"reviewBy":"2027-02-21",
+      "display":{"pt-BR":"Regra aplicável · UE · Artigo 50","en":"Applicable rule · EU · Article 50"},
+      "supports":{"pt-BR":"Sistemas abrangidos devem informar quando pessoas interagem diretamente com IA.","en":"Covered systems must disclose direct interaction with AI."},
+      "limits":{"pt-BR":"Transparência não decide identidade ou direitos de proto-seres.","en":"Transparency does not decide identity or rights for proto-digital beings."}
+    },
+    {
+      "id":"nist-sp-800-63-4","title":"NIST SP 800-63-4 Digital Identity Guidelines","publisher":"NIST","published":"2025-07-31","status":"final-guideline","url":"https://csrc.nist.gov/pubs/sp/800/63/4/final",
+      "display":{"pt-BR":"Diretriz final · identidade digital · 2025","en":"Final digital identity guideline · 2025"},
+      "supports":{"pt-BR":"Referência atual para proofing, autenticação, federação, segurança e privacidade de identidade digital.","en":"Current guidance for identity proofing, authentication, federation, security, and privacy."},
+      "limits":{"pt-BR":"Foi concebida para identidades humanas governamentais; uso para agentes exige adaptação.","en":"It was designed for human government identities; agent use requires adaptation."}
+    },
+    {
+      "id":"iso-42010-2022","title":"ISO/IEC/IEEE 42010:2022 Architecture description","publisher":"ISO / IEC / IEEE","published":"2022-11","status":"international-standard","url":"https://www.iso.org/standard/74393.html",
+      "display":{"pt-BR":"Norma internacional publicada","en":"Published international standard"},
+      "supports":{"pt-BR":"Estrutura descrições por stakeholders, concerns, viewpoints, views e decisões.","en":"Structures descriptions through stakeholders, concerns, viewpoints, views, and decisions."},
+      "limits":{"pt-BR":"Não certifica esta arquitetura.","en":"It does not certify this architecture."}
+    },
+    {
+      "id":"iso-15288-2023","title":"ISO/IEC/IEEE 15288:2023 System life cycle processes","publisher":"ISO / IEC / IEEE","published":"2023-05","status":"international-standard","url":"https://www.iso.org/standard/81702.html",
+      "display":{"pt-BR":"Norma internacional publicada","en":"Published international standard"},
+      "supports":{"pt-BR":"Oferece processos comuns de ciclo de vida de sistemas.","en":"Provides common system life-cycle processes."},
+      "limits":{"pt-BR":"Não prescreve metodologia única nem certifica o projeto.","en":"It prescribes no single methodology and does not certify the project."}
+    },
+    {
+      "id":"iso-29148-2018","title":"ISO/IEC/IEEE 29148:2018 Requirements engineering","publisher":"ISO / IEC / IEEE","published":"2018-11","status":"current-under-revision","url":"https://www.iso.org/standard/72089.html","volatile":true,"reviewBy":"2027-02-21",
+      "display":{"pt-BR":"Versão publicada atual · revisão em andamento","en":"Current published edition · revision underway"},
+      "supports":{"pt-BR":"Fornece processos e itens de informação para engenharia de requisitos.","en":"Provides requirements-engineering processes and information items."},
+      "limits":{"pt-BR":"Nova edição está em desenvolvimento e deverá ser reavaliada.","en":"A new edition is under development and must be re-evaluated."}
+    },
+    {
+      "id":"iso-5338-2023","title":"ISO/IEC 5338:2023 AI system life cycle processes","publisher":"ISO / IEC","published":"2023-12","status":"international-standard","url":"https://www.iso.org/standard/81118.html",
+      "display":{"pt-BR":"Norma publicada · ciclo de vida de IA","en":"Published standard · AI life cycle"},
+      "supports":{"pt-BR":"Adiciona processos específicos de IA ao ciclo de vida de sistemas e software.","en":"Adds AI-specific processes to systems and software life cycles."},
+      "limits":{"pt-BR":"Não define proto-seres nem governança ontológica.","en":"It does not define proto-digital beings or ontological governance."}
+    },
+    {
+      "id":"iso-42001-2023","title":"ISO/IEC 42001:2023 Artificial intelligence management system","publisher":"ISO / IEC","published":"2023-12","status":"international-standard","url":"https://www.iso.org/standard/42001",
+      "display":{"pt-BR":"Norma publicada · gestão de IA","en":"Published standard · AI management"},
+      "supports":{"pt-BR":"Define requisitos organizacionais para um sistema de gestão de IA.","en":"Defines organizational requirements for an AI management system."},
+      "limits":{"pt-BR":"Alinhamento não equivale a implementação certificada.","en":"Alignment is not certified implementation."}
+    },
+    {
+      "id":"iso-23894-2023","title":"ISO/IEC 23894:2023 Guidance on AI risk management","publisher":"ISO / IEC","published":"2023-02","status":"international-standard","url":"https://www.iso.org/standard/77304.html",
+      "display":{"pt-BR":"Norma publicada · risco de IA","en":"Published standard · AI risk"},
+      "supports":{"pt-BR":"Orienta integração de riscos específicos de IA à gestão organizacional.","en":"Guides integration of AI-specific risks into organizational management."},
+      "limits":{"pt-BR":"Não substitui threat models, ética, direito ou avaliação social.","en":"It does not replace threat models, ethics, law, or social evaluation."}
+    },
+    {
+      "id":"nist-ai-rmf","title":"NIST AI Risk Management Framework 1.0","publisher":"NIST","published":"2023-01","status":"framework-under-revision","url":"https://www.nist.gov/itl/ai-risk-management-framework","volatile":true,"reviewBy":"2026-11-21",
+      "display":{"pt-BR":"Framework atual · revisão em andamento","en":"Current framework · revision underway"},
+      "supports":{"pt-BR":"Estrutura Govern, Map, Measure e Manage para riscos de IA.","en":"Provides Govern, Map, Measure, and Manage functions for AI risk."},
+      "limits":{"pt-BR":"A versão 1.0 está sendo revisada e deve ser acompanhada.","en":"Version 1.0 is being revised and must be monitored."}
+    },
+    {
+      "id":"iso-oais-2025","title":"ISO 14721:2025 OAIS reference model","publisher":"ISO","published":"2025-03","status":"international-standard","url":"https://www.iso.org/standard/87471.html",
+      "display":{"pt-BR":"Norma publicada · preservação","en":"Published standard · preservation"},
+      "supports":{"pt-BR":"Modelo de referência e responsabilidades mínimas para preservação e acesso.","en":"Reference model and minimum responsibilities for preservation and access."},
+      "limits":{"pt-BR":"Não certifica o arquivo do PSDResearch.","en":"It does not certify the PSDResearch archive."}
+    },
+    {
+      "id":"iso-16363-2025","title":"ISO 16363:2025 Audit and certification of trustworthy digital repositories","publisher":"ISO","published":"2025-03","status":"international-standard","url":"https://www.iso.org/standard/87472.html",
+      "display":{"pt-BR":"Norma publicada · repositórios confiáveis","en":"Published standard · trustworthy repositories"},
+      "supports":{"pt-BR":"Fornece base para auditoria de repositórios digitais confiáveis.","en":"Provides a basis for auditing trustworthy digital repositories."},
+      "limits":{"pt-BR":"O PSDResearch ainda não foi auditado ou certificado.","en":"PSDResearch has not been audited or certified."}
+    },
+    {
+      "id":"iso-pdfa4-2020","title":"ISO 19005-4:2020 PDF/A-4","publisher":"ISO","published":"2020-11","status":"current-under-revision","url":"https://www.iso.org/standard/71832.html","volatile":true,"reviewBy":"2027-02-21",
+      "display":{"pt-BR":"Versão publicada atual · revisão em andamento","en":"Current published edition · revision underway"},
+      "supports":{"pt-BR":"Define uso de PDF 2.0 para preservação de representação visual estática.","en":"Defines use of PDF 2.0 for preserving static visual representations."},
+      "limits":{"pt-BR":"Não define conversão, custódia física ou auditoria completa; revisão está em desenvolvimento.","en":"It does not define conversion, physical custody, or complete audit; a revision is underway."}
+    }
+  ]
+}

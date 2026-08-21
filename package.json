@@ -1,0 +1,12 @@
+{
+  "name": "psdresearch",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Public multilingual research foundation for Proto-Digital Beings.",
+  "type": "module",
+  "engines": {"node": ">=22"},
+  "scripts": {
+    "check": "node --check site/assets/js/site.js && node --check site/assets/js/reference-integrity.js && node scripts/validate-site.mjs && node scripts/validate-css-contract.mjs && node scripts/validate-legal-footer.mjs && node scripts/validate-reference-integrity.mjs",
+    "serve": "node scripts/serve.mjs"
+  }
+}

@@ -1,0 +1,34 @@
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
+  Content-Security-Policy: default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Resource-Policy: same-origin
+
+/assets/*
+  Cache-Control: public, max-age=0, must-revalidate
+
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/pt-br/privacidade/*
+  X-Robots-Tag: noindex, nofollow
+/en/privacy/*
+  X-Robots-Tag: noindex, nofollow
+/pt-br/termos-de-uso/*
+  X-Robots-Tag: noindex, nofollow
+/en/terms-of-use/*
+  X-Robots-Tag: noindex, nofollow
+/pt-br/cookies-e-rastreamento/*
+  X-Robots-Tag: noindex, nofollow
+/en/cookies-and-tracking/*
+  X-Robots-Tag: noindex, nofollow
+/pt-br/direitos-e-licencas/*
+  X-Robots-Tag: noindex, nofollow
+/en/rights-and-licenses/*
+  X-Robots-Tag: noindex, nofollow
+/pt-br/contato/*
+  X-Robots-Tag: noindex, nofollow
+/en/contact/*
+  X-Robots-Tag: noindex, nofollow

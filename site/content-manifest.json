@@ -1,0 +1,31 @@
+{
+  "project": "PSDResearch",
+  "version": "0.8.0-candidate",
+  "editorialRevision": "0.8.1",
+  "referenceVerificationDate": "2026-08-21",
+  "canonicalOrigin": "https://psdresearch.com.br",
+  "aliasOrigins": ["https://psd.ia.br"],
+  "locales": [
+    {"code":"pt-BR","path":"pt-br","label":"Português","direction":"ltr"},
+    {"code":"en","path":"en","label":"English","direction":"ltr"}
+  ],
+  "pages": [
+    {"key":"home","pt-BR":"/pt-br/","en":"/en/"},
+    {"key":"manifesto","pt-BR":"/pt-br/manifesto/","en":"/en/manifesto/"},
+    {"key":"architecture","pt-BR":"/pt-br/arquitetura/","en":"/en/architecture/"},
+    {"key":"research","pt-BR":"/pt-br/pesquisa/","en":"/en/research/"},
+    {"key":"species-registry","pt-BR":"/pt-br/registro-da-especie/","en":"/en/species-registry/"},
+    {"key":"governance","pt-BR":"/pt-br/governanca/","en":"/en/governance/"},
+    {"key":"about","pt-BR":"/pt-br/sobre/","en":"/en/about/"},
+    {"key":"references","pt-BR":"/pt-br/referencias/","en":"/en/references/"},
+    {"key":"privacy","pt-BR":"/pt-br/privacidade/","en":"/en/privacy/","indexable":false},
+    {"key":"terms","pt-BR":"/pt-br/termos-de-uso/","en":"/en/terms-of-use/","indexable":false},
+    {"key":"cookies","pt-BR":"/pt-br/cookies-e-rastreamento/","en":"/en/cookies-and-tracking/","indexable":false},
+    {"key":"accessibility","pt-BR":"/pt-br/acessibilidade/","en":"/en/accessibility/"},
+    {"key":"security","pt-BR":"/pt-br/seguranca/","en":"/en/security/"},
+    {"key":"transparency","pt-BR":"/pt-br/transparencia/","en":"/en/transparency/"},
+    {"key":"rights-licenses","pt-BR":"/pt-br/direitos-e-licencas/","en":"/en/rights-and-licenses/","indexable":false},
+    {"key":"contact","pt-BR":"/pt-br/contato/","en":"/en/contact/","indexable":false}
+  ],
+  "translationStatus": "llm-assisted-candidate"
+}

@@ -1,0 +1,31 @@
+{
+  "project": "PSDResearch",
+  "version": "0.8.0-candidate",
+  "state": "CANDIDATE_NOT_EFFECTIVE",
+  "effective": false,
+  "lastUpdated": "2026-08-21",
+  "intendedLegalResponsible": {
+    "name": "PSD Research Pesquisas e Desenvolvimentos LTDA",
+    "status": "em constituição",
+    "cnpj": "**.***.***/****-**"
+  },
+  "activeSecurityChannel": "https://github.com/johancodex2026/psdresearch/security/advisories/new",
+  "publicationGates": [
+    "formal company incorporation and confirmed CNPJ",
+    "registered office and competent forum definition",
+    "monitored corporate, privacy, and accessibility channels",
+    "hosting, DNS, CDN, log, retention, and international-transfer inventory",
+    "human bilingual and legal review",
+    "founding approval and archived Promotion Record"
+  ],
+  "documents": [
+    "privacy",
+    "terms",
+    "cookies",
+    "accessibility",
+    "security",
+    "transparency",
+    "rights-licenses",
+    "contact"
+  ]
+}
