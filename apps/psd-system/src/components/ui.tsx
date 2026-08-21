@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import { statusLabels } from "@/lib/domain";
-import { formatBytes, formatRelativeTime } from "@/lib/utils";
+import { formatBytes, formatRelativeTime } from "@/lib/format";
 
 export function StatusBadge({ value, label }: { value: string; label?: string }) {
   const normalized = value.toLowerCase().replaceAll("_", "-");
