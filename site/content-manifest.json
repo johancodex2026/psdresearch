@@ -18,14 +18,14 @@
     {"key":"governance","pt-BR":"/pt-br/governanca/","en":"/en/governance/"},
     {"key":"about","pt-BR":"/pt-br/sobre/","en":"/en/about/"},
     {"key":"references","pt-BR":"/pt-br/referencias/","en":"/en/references/"},
-    {"key":"privacy","pt-BR":"/pt-br/privacidade/","en":"/en/privacy/"},
-    {"key":"terms","pt-BR":"/pt-br/termos-de-uso/","en":"/en/terms-of-use/"},
-    {"key":"cookies","pt-BR":"/pt-br/cookies-e-rastreamento/","en":"/en/cookies-and-tracking/"},
+    {"key":"privacy","pt-BR":"/pt-br/privacidade/","en":"/en/privacy/","indexable":false},
+    {"key":"terms","pt-BR":"/pt-br/termos-de-uso/","en":"/en/terms-of-use/","indexable":false},
+    {"key":"cookies","pt-BR":"/pt-br/cookies-e-rastreamento/","en":"/en/cookies-and-tracking/","indexable":false},
     {"key":"accessibility","pt-BR":"/pt-br/acessibilidade/","en":"/en/accessibility/"},
     {"key":"security","pt-BR":"/pt-br/seguranca/","en":"/en/security/"},
     {"key":"transparency","pt-BR":"/pt-br/transparencia/","en":"/en/transparency/"},
-    {"key":"rights-licenses","pt-BR":"/pt-br/direitos-e-licencas/","en":"/en/rights-and-licenses/"},
-    {"key":"contact","pt-BR":"/pt-br/contato/","en":"/en/contact/"}
+    {"key":"rights-licenses","pt-BR":"/pt-br/direitos-e-licencas/","en":"/en/rights-and-licenses/","indexable":false},
+    {"key":"contact","pt-BR":"/pt-br/contato/","en":"/en/contact/","indexable":false}
   ],
   "translationStatus": "llm-assisted-candidate"
 }
