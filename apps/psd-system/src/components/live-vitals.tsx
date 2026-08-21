@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import type { VitalSignalView } from "@/lib/domain";
 import { StatusBadge, Sparkline } from "@/components/ui";
-import { formatBytes, formatRelativeTime } from "@/lib/utils";
+import { formatBytes, formatRelativeTime } from "@/lib/format";
 
 export function LiveVitals({ coreId, initial }: { coreId: string; initial: VitalSignalView[] }) {
   const [signals, setSignals] = useState(initial);
