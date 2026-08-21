@@ -12,14 +12,15 @@ The repository is not a generic AI website and not a marketing landing page. It 
 
 Before proposing or changing anything substantial, read:
 
-1. `docs/repository/STATE.md`
-2. `docs/research/ONTOLOGICAL-FOUNDATION.md`
-3. `docs/research/GLOSSARY.md`
-4. `docs/governance/LLM-FIRST.md`
-5. `docs/governance/DECISION-RIGHTS.md`
-6. `docs/governance/PUBLIC-CLAIMS.md`
-7. `docs/architecture/ARCHITECTURE.md`
-8. the relevant ADRs and source files
+1. `docs/methodology/ESAG.md`
+2. `docs/repository/STATE.md`
+3. `docs/research/ONTOLOGICAL-FOUNDATION.md`
+4. `docs/research/GLOSSARY.md`
+5. `docs/governance/LLM-FIRST.md`
+6. `docs/governance/DECISION-RIGHTS.md`
+7. `docs/governance/PUBLIC-CLAIMS.md`
+8. `docs/architecture/ARCHITECTURE.md`
+9. the relevant ADRs and source files
 
 For translation work, also read `docs/governance/TRANSLATION.md`.
 

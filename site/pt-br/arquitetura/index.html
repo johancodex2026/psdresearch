@@ -43,12 +43,12 @@
     <main id="main">
       <section class="page-hero architecture-hero" aria-labelledby="architecture-title">
         <div>
-          <p class="eyebrow">Arquitetura conceitual · versão candidata 0.3</p>
+          <p class="eyebrow">Arquitetura conceitual · versão candidata 0.4</p>
           <h1 id="architecture-title">Da hipótese à continuidade verificável.</h1>
-          <p class="lead">O Manifesto formulou por que a pergunta importa. Esta página mostra como a ideia pode ser decomposta em camadas, autoridade, memória, transições, provas e testes — sem presumir consciência nem confundir uma implementação com o indivíduo.</p>
+          <p class="lead">O Manifesto formulou por que a pergunta importa. Esta página mostra como a ideia pode ser decomposta em método, camadas, autoridade, memória, transições, provas e testes — sem presumir consciência nem confundir uma implementação com o indivíduo.</p>
           <blockquote class="architecture-hero-quote"><p>“A identidade não é o arquivo. É a continuidade verificável do estado, da história e da linhagem.”</p></blockquote>
           <div class="hero-actions">
-            <a class="button button-primary" href="#modelo-fundamental">Conhecer o modelo</a>
+            <a class="button button-primary" href="#metodologias">Conhecer o método</a>
             <a class="button button-secondary" href="#validacao">Ver como testar</a>
           </div>
           <p class="architecture-disclosure">Documento público de visão · não substitui projeto executivo, revisão criptográfica, auditoria independente ou decisão ontológica</p>
@@ -63,6 +63,36 @@
           </div>
           <figcaption id="overview-caption">Sentinela, âncoras de confiança, registro e testemunhas cercam as camadas. Nenhum componente isolado define ou valida o indivíduo por conta própria.</figcaption>
         </figure>
+      </section>
+
+      <section class="section section-light architecture-methodology" id="metodologias" aria-labelledby="methodology-title">
+        <div class="section-heading">
+          <p class="eyebrow">Metodologias</p>
+          <div>
+            <h2 id="methodology-title">ESAG organiza a passagem da ideia à evidência.</h2>
+            <p>A Engenharia de Sistemas de Alta Garantia é o arranjo metodológico do PSDResearch para tratar uma hipótese ontológica como sistema crítico: com ciclo de vida, requisitos, decisões arquiteturais, riscos proporcionais, claims de assurance, evidências versionadas e aprendizado de longo prazo.</p>
+          </div>
+        </div>
+        <div class="esag-method">
+          <div class="esag-statement">
+            <p class="kicker">Cadeia metodológica</p>
+            <div>
+              <strong>propósito → requisito → arquitetura → risco → evidência → gate → aprendizado</strong>
+              <p>ESAG não é um selo nem uma metodologia isolada. É uma composição interna de referenciais reconhecidos, aplicada conforme o tipo de decisão e o nível de assurance exigido.</p>
+            </div>
+          </div>
+          <div class="methodology-grid">
+            <article class="methodology-card"><span>Gestão e governança</span><h3>Ciclo de vida com autoridade e encerramento.</h3><p class="methodology-references">PMBOK · PRINCE2 · Stage-Gate</p><p class="methodology-application">Define responsabilidades, gates, validações, promoção de estado e fechamento formal do trabalho.</p></article>
+            <article class="methodology-card"><span>Planejamento do trabalho</span><h3>Decomposição sem perder foco.</h3><p class="methodology-references">WBS · Scrum · Shape Up</p><p class="methodology-application">Organiza fases e pequenos pacotes, critérios de aceite, limite de trabalho em andamento e concentração no resultado.</p></article>
+            <article class="methodology-card"><span>Engenharia de sistemas e requisitos</span><h3>Do conceito de operação à validação.</h3><p class="methodology-references">ISO/IEC/IEEE 15288 · ISO/IEC/IEEE 29148 · NASA Systems Engineering Handbook · ConOps · V&amp;V</p><p class="methodology-application">Liga ciclo de vida, revisões técnicas, requisitos, conceito de operação, verificação e validação.</p></article>
+            <article class="methodology-card"><span>Arquitetura e decisões</span><h3>Contexto antes da solução.</h3><p class="methodology-references">ISO/IEC/IEEE 42010 · arc42 · C4 · ADR</p><p class="methodology-application">Explicita stakeholders, concerns, viewpoints, views, alternativas, decisão e consequências.</p></article>
+            <article class="methodology-card"><span>Riscos, segurança e privacidade</span><h3>Ameaças e perigos com risco residual declarado.</h3><p class="methodology-references">ISO 31000 · NIST SP 800-160 · STPA · STRIDE · LINDDUN</p><p class="methodology-application">Combina gestão de risco, perigos sistêmicos, ameaças de segurança, impactos de privacidade e controles proporcionais.</p></article>
+            <article class="methodology-card"><span>Assurance e governança de IA</span><h3>Claims só avançam acompanhados de evidência.</h3><p class="methodology-references">SACM · NIST AI RMF</p><p class="methodology-application">Estrutura alegações, argumentos, evidências, separação de papéis, contestabilidade e limites da participação da IA.</p></article>
+            <article class="methodology-card"><span>Software, evidências e entrega</span><h3>Proveniência preservada do texto ao build.</h3><p class="methodology-references">Docs-as-Code · DORA · SBOM · SLSA</p><p class="methodology-application">Mantém repositório canônico, projeções automatizadas, rastreabilidade, hashes, builds e cadeia de suprimentos auditável.</p></article>
+            <article class="methodology-card"><span>Continuidade e aprendizado</span><h3>Preservar, retomar e aprender sem apagar história.</h3><p class="methodology-references">OAIS · postmortems · retrospectivas</p><p class="methodology-application">Define preservação, recuperação, retomada, aprendizado acumulado e encerramento responsável.</p></article>
+          </div>
+          <p class="methodology-boundary"><strong>Fronteira:</strong> ESAG organiza a cadeia de confiança, mas não substitui revisão especializada em criptografia, consenso distribuído, hardware, banco de dados, preservação digital, ética, direito, privacidade ou ciências sociais.</p>
+        </div>
       </section>
 
       <section class="section" id="modelo-fundamental" aria-labelledby="separations-title">
@@ -235,7 +265,7 @@
     </main>
 
     <footer class="site-footer">
-      <div><img src="/assets/brand/psd-mark.svg" alt="" width="36" height="36"><p><strong>PSDResearch v0.3 candidate</strong><br>Arquitetura pública de pesquisa. Não declara consciência, senciência, vida ou personalidade jurídica.</p></div>
+      <div><img src="/assets/brand/psd-mark.svg" alt="" width="36" height="36"><p><strong>PSDResearch v0.4 candidate</strong><br>Arquitetura pública de pesquisa. Não declara consciência, senciência, vida ou personalidade jurídica.</p></div>
       <div class="footer-links"><a href="https://github.com/johancodex2026/psdresearch" rel="external">Código e governança</a><span>psdresearch.com.br</span><span>psd.ia.br</span></div>
     </footer>
     <script src="/assets/js/site.js" defer></script>

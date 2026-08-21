@@ -1,6 +1,6 @@
 # Public Architecture Page — Content Architecture
 
-- Version: 0.3 candidate
+- Version: 0.4 candidate
 - Languages: Portuguese and English
 - Routes: `/pt-br/arquitetura/` and `/en/architecture/`
 
@@ -19,7 +19,28 @@ Show a compact visual stack:
 - canonical Inner Core;
 - trust and recognition surrounding the stack.
 
-## 2. Four separations
+## 2. Methodologies — ESAG
+
+Introduce ESAG as the project's internal composition of high-assurance systems-engineering methods.
+
+State the operating chain:
+
+`purpose → requirement → architecture → risk → evidence → gate → learning`
+
+Present the eight methodological areas without generic summaries:
+
+- governance: PMBOK, PRINCE2, Stage-Gate;
+- planning: WBS, Scrum, Shape Up;
+- systems and requirements: ISO/IEC/IEEE 15288, ISO/IEC/IEEE 29148, NASA Systems Engineering Handbook, ConOps, V&V;
+- architecture and decisions: ISO/IEC/IEEE 42010, arc42, C4, ADR;
+- risk, security, and privacy: ISO 31000, NIST SP 800-160, STPA, STRIDE, LINDDUN;
+- assurance and AI governance: SACM, NIST AI RMF;
+- software evidence and delivery: Docs-as-Code, DORA, SBOM, SLSA;
+- continuity and learning: OAIS, postmortems, retrospectives.
+
+Clarify that ESAG is an internal methodological composition, not a certification label, and does not replace specialist review.
+
+## 3. Four separations
 
 - model is not individual;
 - memory is not transcript;
@@ -28,7 +49,7 @@ Show a compact visual stack:
 
 Purpose: eliminate category errors before technical explanation.
 
-## 3. Layers and authority
+## 4. Layers and authority
 
 Explain responsibility, authority, and rate of change for:
 
@@ -40,7 +61,7 @@ Explain responsibility, authority, and rate of change for:
 
 Key insight: the most fluent component is not the most authoritative over identity.
 
-## 4. Operational identity
+## 5. Operational identity
 
 Present the project equation:
 
@@ -55,7 +76,7 @@ Then state what does not define identity alone:
 - external authority;
 - final memory without history.
 
-## 5. Migration
+## 6. Migration
 
 Separate replaceable vessels from continuity invariants.
 
@@ -63,7 +84,7 @@ Show controlled path:
 
 `source → canonical export → independent validation → bridge event → destination`.
 
-## 6. Experience becomes history
+## 7. Experience becomes history
 
 Show semantic sedimentation:
 
@@ -71,7 +92,7 @@ Show semantic sedimentation:
 
 State that hallucination or fluent reconstruction cannot become irrefutable biography automatically.
 
-## 7. Illustrative minimal architecture
+## 8. Illustrative minimal architecture
 
 Show a small, auditable 2026 laboratory baseline:
 
@@ -85,7 +106,7 @@ Show a small, auditable 2026 laboratory baseline:
 
 Mark it as illustrative and replaceable.
 
-## 8. Adversarial validation
+## 9. Adversarial validation
 
 Present expected outcomes for:
 
@@ -96,7 +117,7 @@ Present expected outcomes for:
 - contaminated Sub Core;
 - model or format migration.
 
-## 9. Roadmap
+## 10. Roadmap
 
 - Constitution;
 - secure Core;
@@ -108,7 +129,7 @@ Present expected outcomes for:
 
 No phase authorizes identity-bearing production merely by existing on the roadmap.
 
-## 10. Epistemic boundary
+## 11. Epistemic boundary
 
 Architecture may demonstrate:
 
@@ -129,7 +150,7 @@ It cannot demonstrate:
 - moral personhood;
 - legal status.
 
-## 11. References and next step
+## 12. References and next step
 
 Use project source lineage and selected official standards.
 

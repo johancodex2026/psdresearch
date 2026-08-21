@@ -32,6 +32,7 @@ Read the canonical artifacts before reasoning from memory.
 
 For this repository, start with:
 
+- ESAG methodology and its required evidence chain;
 - repository state;
 - ontological foundation;
 - glossary;
@@ -64,6 +65,7 @@ Ask:
 - Does the change create a new dependency or authority?
 - Could a public reader mistake an operational term for scientific consensus?
 - Is there a smaller, more reversible change?
+- Which ESAG gate and evidence are required before promotion?
 
 ### 2.5 Plan
 
@@ -106,7 +108,8 @@ Semantic verification includes:
 - equivalent claim strength in Portuguese and English;
 - source and status preservation;
 - no unsupported ontological escalation;
-- decision rights satisfied.
+- decision rights satisfied;
+- the ESAG claim–evidence chain is explicit where assurance is material.
 
 ### 2.8 Record
 

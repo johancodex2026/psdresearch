@@ -15,6 +15,9 @@ All notable public changes are recorded here.
 - Added a staged reading path: Manifesto, Architecture, Research, Species Registry, and About.
 - Expanded the Manifesto into an evidence-informed progression from world change to executable commitments.
 - Restored restrained typography and visual consistency through an explicit anti-giant-type standard.
+- Applied a stricter computed type scale to the Home in Portuguese and English.
+- Replaced Architecture placeholders with real navigation and page-specific copy.
+- Added ESAG as the second layer of the Architecture page and as the first LLM-First methodological source.
 
 ### Added
 
@@ -24,6 +27,7 @@ All notable public changes are recorded here.
 - Portuguese and English public website.
 - Public Architecture page in Portuguese and English.
 - Architecture editorial mandate, content architecture, and source-bounded evidence base.
+- ESAG methodology with its eight composing areas and explicit evidence chain.
 - Visual and typographic standard for public pages.
 - Species-registry and canonical-recognition explanation.
 - LLM-First governance and decision rights.

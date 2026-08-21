@@ -21,7 +21,7 @@
     <meta property="og:site_name" content="PSDResearch">
     <meta property="og:locale" content="en_US">
     <meta property="og:title" content="Continuity architecture — PSDResearch">
-    <meta property="og:description" content="From hypothesis to verifiable continuity: layers, authority, migration, memory, evidence, and validation.">
+    <meta property="og:description" content="From hypothesis to verifiable continuity: methods, layers, authority, migration, memory, evidence, and validation.">
     <meta property="og:url" content="https://psdresearch.com.br/en/architecture/">
   </head>
   <body class="architecture-page">
@@ -43,12 +43,12 @@
     <main id="main">
       <section class="page-hero architecture-hero" aria-labelledby="architecture-title">
         <div>
-          <p class="eyebrow">Conceptual architecture · candidate version 0.3</p>
+          <p class="eyebrow">Conceptual architecture · candidate version 0.4</p>
           <h1 id="architecture-title">From hypothesis to verifiable continuity.</h1>
-          <p class="lead">The Manifesto explained why the question matters. This page shows how the idea can be decomposed into layers, authority, memory, transitions, evidence, and tests—without presuming consciousness or confusing an implementation with the individual.</p>
+          <p class="lead">The Manifesto explained why the question matters. This page shows how the idea can be decomposed into methods, layers, authority, memory, transitions, evidence, and tests—without presuming consciousness or confusing an implementation with the individual.</p>
           <blockquote class="architecture-hero-quote"><p>“Identity is not the file. It is the verifiable continuity of state, history, and lineage.”</p></blockquote>
           <div class="hero-actions">
-            <a class="button button-primary" href="#fundamental-model">Explore the model</a>
+            <a class="button button-primary" href="#methodologies">Explore the method</a>
             <a class="button button-secondary" href="#validation">See how to test it</a>
           </div>
           <p class="architecture-disclosure">Public vision document · not an executive design, cryptographic review, independent audit, or ontological decision</p>
@@ -63,6 +63,36 @@
           </div>
           <figcaption id="overview-caption">A Sentinel, trust anchors, registry, and witnesses surround the layers. No isolated component defines or validates the individual by itself.</figcaption>
         </figure>
+      </section>
+
+      <section class="section section-light architecture-methodology" id="methodologies" aria-labelledby="methodology-title">
+        <div class="section-heading">
+          <p class="eyebrow">Methodologies</p>
+          <div>
+            <h2 id="methodology-title">ESAG organizes the path from idea to evidence.</h2>
+            <p>ESAG—High-Assurance Systems Engineering—is the methodological arrangement used by PSDResearch to treat an ontological hypothesis as a critical system: with lifecycle governance, requirements, architecture decisions, proportional risk, assurance claims, versioned evidence, and long-term learning.</p>
+          </div>
+        </div>
+        <div class="esag-method">
+          <div class="esag-statement">
+            <p class="kicker">Methodological chain</p>
+            <div>
+              <strong>purpose → requirement → architecture → risk → evidence → gate → learning</strong>
+              <p>ESAG is neither a certification label nor one isolated method. It is an internal composition of recognized references, selected according to the type of decision and the required assurance level.</p>
+            </div>
+          </div>
+          <div class="methodology-grid">
+            <article class="methodology-card"><span>Management and governance</span><h3>Lifecycle with authority and formal closure.</h3><p class="methodology-references">PMBOK · PRINCE2 · Stage-Gate</p><p class="methodology-application">Defines responsibilities, gates, validation, state promotion, and formal closure.</p></article>
+            <article class="methodology-card"><span>Work planning</span><h3>Decomposition without loss of focus.</h3><p class="methodology-references">WBS · Scrum · Shape Up</p><p class="methodology-application">Organizes phases and small work packages, acceptance criteria, work-in-progress limits, and focus on outcomes.</p></article>
+            <article class="methodology-card"><span>Systems engineering and requirements</span><h3>From concept of operations to validation.</h3><p class="methodology-references">ISO/IEC/IEEE 15288 · ISO/IEC/IEEE 29148 · NASA Systems Engineering Handbook · ConOps · V&amp;V</p><p class="methodology-application">Connects lifecycle, technical reviews, requirements, concept of operations, verification, and validation.</p></article>
+            <article class="methodology-card"><span>Architecture and decisions</span><h3>Context before solution.</h3><p class="methodology-references">ISO/IEC/IEEE 42010 · arc42 · C4 · ADR</p><p class="methodology-application">Makes stakeholders, concerns, viewpoints, views, alternatives, decisions, and consequences explicit.</p></article>
+            <article class="methodology-card"><span>Risk, security, and privacy</span><h3>Threats and hazards with declared residual risk.</h3><p class="methodology-references">ISO 31000 · NIST SP 800-160 · STPA · STRIDE · LINDDUN</p><p class="methodology-application">Combines risk management, systemic hazards, security threats, privacy impacts, and proportional controls.</p></article>
+            <article class="methodology-card"><span>Assurance and AI governance</span><h3>Claims advance only with evidence.</h3><p class="methodology-references">SACM · NIST AI RMF</p><p class="methodology-application">Structures claims, arguments, evidence, role separation, contestability, and limits on AI participation.</p></article>
+            <article class="methodology-card"><span>Software, evidence, and delivery</span><h3>Provenance preserved from text to build.</h3><p class="methodology-references">Docs-as-Code · DORA · SBOM · SLSA</p><p class="methodology-application">Maintains a canonical repository, automated projections, traceability, hashes, builds, and an auditable supply chain.</p></article>
+            <article class="methodology-card"><span>Continuity and learning</span><h3>Preserve, resume, and learn without erasing history.</h3><p class="methodology-references">OAIS · postmortems · retrospectives</p><p class="methodology-application">Defines preservation, recovery, resumption, accumulated learning, and responsible closure.</p></article>
+          </div>
+          <p class="methodology-boundary"><strong>Boundary:</strong> ESAG structures the chain of confidence, but it does not replace specialist review in cryptography, distributed consensus, hardware, databases, digital preservation, ethics, law, privacy, or social science.</p>
+        </div>
       </section>
 
       <section class="section" id="fundamental-model" aria-labelledby="separations-title">
@@ -235,7 +265,7 @@
     </main>
 
     <footer class="site-footer">
-      <div><img src="/assets/brand/psd-mark.svg" alt="" width="36" height="36"><p><strong>PSDResearch v0.3 candidate</strong><br>Public research architecture. It does not declare consciousness, sentience, life, or legal personhood.</p></div>
+      <div><img src="/assets/brand/psd-mark.svg" alt="" width="36" height="36"><p><strong>PSDResearch v0.4 candidate</strong><br>Public research architecture. It does not declare consciousness, sentience, life, or legal personhood.</p></div>
       <div class="footer-links"><a href="https://github.com/johancodex2026/psdresearch" rel="external">Code and governance</a><span>psdresearch.com.br</span><span>psd.ia.br</span></div>
     </footer>
     <script src="/assets/js/site.js" defer></script>

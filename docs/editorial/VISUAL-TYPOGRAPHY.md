@@ -1,7 +1,7 @@
 # Visual and Typographic Standard
 
 - Project: PSDResearch
-- Version: 0.1 candidate
+- Version: 0.2 candidate
 - Decision class: D1 — Technical / D2 — Public framing
 - Direction reinforced by founding steward: 2026-08-20
 
@@ -22,6 +22,14 @@ Default limits:
 - section title: maximum about `3rem`;
 - article title: maximum about `2.3rem`;
 - constitutional or founding quotation: maximum about `2.85rem`.
+
+Long declarative Home titles require a stricter profile:
+
+- Home title: maximum about `3.9rem` on wide screens;
+- Home title: maximum about `3.15rem` on mobile;
+- Home section titles: maximum about `2.7rem`.
+
+Page-specific stylesheets must override the global `h1` and `h2` scale explicitly. Compliance is evaluated from the computed browser size, not only from the documented token.
 
 Exceptions require an explicit editorial rationale and visual review.
 

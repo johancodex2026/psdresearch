@@ -143,6 +143,102 @@
   line-height: 1.55;
 }
 
+.architecture-methodology {
+  border-top: .35rem solid var(--teal);
+}
+
+.esag-method {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.esag-statement {
+  display: grid;
+  grid-template-columns: minmax(10rem, .32fr) minmax(0, 1fr);
+  gap: clamp(1.5rem, 5vw, 4rem);
+  align-items: start;
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  background: rgba(233, 226, 211, .58);
+}
+
+.esag-statement .kicker {
+  margin: .2rem 0 0;
+}
+
+.esag-statement > div {
+  display: grid;
+  gap: .75rem;
+}
+
+.esag-statement strong {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: clamp(.92rem, 1.55vw, 1.14rem);
+  line-height: 1.7;
+  color: var(--ink);
+}
+
+.esag-statement p:last-child {
+  margin: 0;
+  color: var(--ink-soft);
+}
+
+.methodology-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.methodology-card {
+  min-height: 14rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1.35rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255, 253, 248, .72);
+}
+
+.methodology-card > span {
+  color: var(--teal);
+  font-size: .66rem;
+  font-weight: 900;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.methodology-card h3 {
+  margin: .7rem 0 .55rem;
+  font-family: var(--serif);
+  font-size: 1.42rem;
+  line-height: 1.25;
+}
+
+.methodology-references {
+  margin: 0 0 auto;
+  color: var(--violet);
+  font-size: .76rem;
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+.methodology-application {
+  margin: 1.2rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  color: var(--ink-soft);
+  font-size: .86rem;
+}
+
+.methodology-boundary {
+  margin: 0;
+  padding: 1.15rem 1.3rem;
+  border-left: .25rem solid var(--red);
+  background: rgba(183, 63, 58, .075);
+  color: var(--ink-soft);
+}
+
 .architecture-principles {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -663,6 +759,10 @@
     max-width: 40rem;
   }
 
+  .methodology-grid {
+    grid-template-columns: 1fr;
+  }
+
   .validation-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -690,7 +790,8 @@
   .not-identity-grid,
   .validation-grid,
   .architecture-reference-list,
-  .authority-row {
+  .authority-row,
+  .esag-statement {
     grid-template-columns: 1fr;
   }
 
