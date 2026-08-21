@@ -6,7 +6,7 @@
   "type": "module",
   "engines": {"node": ">=22"},
   "scripts": {
-    "check": "node scripts/validate-site.mjs && node scripts/validate-css-contract.mjs && node scripts/validate-legal-footer.mjs",
+    "check": "node --check site/assets/js/site.js && node --check site/assets/js/reference-integrity.js && node scripts/validate-site.mjs && node scripts/validate-css-contract.mjs && node scripts/validate-legal-footer.mjs && node scripts/validate-reference-integrity.mjs",
     "serve": "node scripts/serve.mjs"
   }
 }

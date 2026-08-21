@@ -24,12 +24,14 @@ Before proposing or changing anything substantial, read:
 6. `docs/governance/REVIEW-AND-ARCHIVE.md`
 7. `docs/legal/LEGAL-PUBLICATION-BASELINE.md`
 8. `docs/legal/DATA-AND-CONTACT-GATE.md`
-9. `docs/research/ONTOLOGICAL-FOUNDATION.md`
-10. `docs/research/GLOSSARY.md`
-11. `docs/governance/LLM-FIRST.md`
-12. `docs/governance/PUBLIC-CLAIMS.md`
-13. `docs/architecture/ARCHITECTURE.md`
-14. relevant ADRs, evidence bases, and source files
+9. `site/reference-manifest.json`
+10. `docs/research/REFERENCE-AUDIT-2026-08-21.md`
+11. `docs/research/ONTOLOGICAL-FOUNDATION.md`
+12. `docs/research/GLOSSARY.md`
+13. `docs/governance/LLM-FIRST.md`
+14. `docs/governance/PUBLIC-CLAIMS.md`
+15. `docs/architecture/ARCHITECTURE.md`
+16. relevant ADRs, evidence bases, and source files
 
 For translation work, also read `docs/governance/TRANSLATION.md`.
 
@@ -101,7 +103,7 @@ Never silently weaken these distinctions:
 
 A change that alters one of these distinctions is at least `D3 — Ontological` and requires the corresponding gate.
 
-## 7. Public epistemic discipline
+## 7. Public epistemic and reference discipline
 
 Every substantive public claim must be identifiable as one of:
 
@@ -115,6 +117,15 @@ Every substantive public claim must be identifiable as one of:
 
 Do not present a hypothesis as a finding. Do not present a project definition as a universal scientific definition. Do not state or imply that PSDResearch has proven consciousness, sentience, life, personhood, rights, sovereignty, or a new species.
 
+For external sources:
+
+- distinguish standards, recommendations, candidate recommendations, drafts, initiatives, announcements, preprints, peer-reviewed studies, guidelines, frameworks, and applicable regulation;
+- preserve the difference between association and causation;
+- record what a source supports and what it does not support;
+- reverify volatile references by the date recorded in `site/reference-manifest.json` and before public promotion;
+- do not use a valid link as a substitute for accurate source interpretation;
+- never let a source prove an ontology it did not investigate.
+
 Use ambitious language for the horizon and precise language for the evidence.
 
 ## 8. Research before proclamation
@@ -126,6 +137,7 @@ Prefer formulations such as:
 - “may,” “could,” “working definition,” “research hypothesis,” “proposed architecture,” and “operational term”;
 - “persistent digital identity” before “digital person”;
 - “social recognition” before “legal status”;
+- “technically researchable” before “viable” when implementation evidence does not yet exist;
 - “proto-digital being” as a controlled research category, not an established scientific class.
 
 ## 9. Multilingual integrity
@@ -142,7 +154,7 @@ For every public page:
 - update all language versions in the same pull request unless an explicit exception is recorded;
 - mark translation status honestly.
 
-A translation may improve naturalness but may not strengthen or soften an ontological, governance, or legal claim without review.
+A translation may improve naturalness but may not strengthen or soften an ontological, governance, legal, or source-derived claim without review.
 
 ## 10. Architecture constraints
 
@@ -181,7 +193,7 @@ Before executing:
 4. avoid unrelated refactors;
 5. run `npm run check`;
 6. inspect the rendered site at mobile and desktop widths when visual behavior changed;
-7. update provenance, review, legal-state, and archive records when the change is material;
+7. update provenance, review, legal state, source status, and archive records when the change is material;
 8. report what changed, what was verified, and what remains candidate.
 
 Do not:
@@ -195,7 +207,8 @@ Do not:
 - merge your own D3 or D4 proposal as if LLM production were approval;
 - erase dissent, negative results, rejected alternatives, or archive gaps;
 - describe a physical copy as canonical when source and digital evidence are missing;
-- activate legal documents while `site/legal-manifest.json` has `effective: false`.
+- activate legal documents while `site/legal-manifest.json` has `effective: false`;
+- hide a draft, preprint, announced intent, or revision-in-progress behind generic wording such as “standard” or “proven”.
 
 ## 13. Provenance and repository state
 
@@ -207,6 +220,8 @@ Material artifacts must follow `docs/governance/REVIEW-AND-ARCHIVE.md` and recei
 
 Legal and institutional pages must also follow `docs/legal/LEGAL-PUBLICATION-BASELINE.md`.
 
+Reference-sensitive public pages must preserve `site/reference-manifest.json` and the dated audit trail.
+
 ## 14. Definition of done
 
 A change is done only when:
@@ -217,6 +232,7 @@ A change is done only when:
 - internal links and assets resolve;
 - automated validation passes;
 - accessibility and reduced-motion behavior are preserved;
-- documentation, founding positions, provenance, legal state, and archive records are updated when needed;
-- no unsupported ontological or legal escalation was introduced;
+- documentation, founding positions, provenance, legal state, reference state, and archive records are updated when needed;
+- volatile sources are reverified when due;
+- no unsupported ontological, legal, causal, scientific, or normative escalation was introduced;
 - open findings, dissent, limitations, and residual risk remain visible.

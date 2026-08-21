@@ -1,0 +1,171 @@
+/* PSDResearch reference integrity and public source-status page */
+.reference-status-badge {
+  display: inline-flex;
+  align-items: center;
+  margin: .35rem 0 0 .45rem;
+  padding: .22rem .5rem;
+  border: 1px solid var(--line);
+  border-radius: 99rem;
+  background: rgba(255, 253, 248, .76);
+  color: var(--ink-soft);
+  font-size: .61rem;
+  font-weight: 900;
+  letter-spacing: .07em;
+  line-height: 1.25;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+[data-reference-status="initial-public-draft"] .reference-status-badge,
+[data-reference-status="preprint"] .reference-status-badge,
+[data-reference-status="announced-intent"] .reference-status-badge,
+[data-reference-status="standards-development"] .reference-status-badge {
+  border-color: rgba(183, 63, 58, .32);
+  background: rgba(183, 63, 58, .06);
+}
+
+.signal-sources {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .45rem .8rem;
+  margin-top: .65rem;
+}
+
+.signal-sources a {
+  font-size: .74rem;
+  font-weight: 800;
+}
+
+.reference-page .reference-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(18rem, .66fr);
+  align-items: center;
+  gap: clamp(2.4rem, 6vw, 5.2rem);
+  padding-top: clamp(7rem, 13vh, 9.5rem);
+  padding-bottom: clamp(3.8rem, 7vw, 6rem);
+}
+
+.reference-page .reference-hero h1 {
+  max-width: 52rem;
+  font-size: clamp(2.5rem, 4.45vw, 4rem);
+  line-height: 1.04;
+}
+
+.reference-status-panel {
+  padding: 1.35rem;
+  border: 1px solid var(--line);
+  border-top: .3rem solid var(--teal);
+  border-radius: 1.05rem;
+  background: rgba(255, 253, 248, .76);
+  box-shadow: var(--shadow);
+}
+
+.reference-status-panel dl {
+  display: grid;
+  grid-template-columns: minmax(8rem, .42fr) minmax(0, 1fr);
+  gap: .65rem 1rem;
+  margin: 0;
+}
+
+.reference-status-panel dt {
+  color: var(--teal);
+  font-size: .66rem;
+  font-weight: 900;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.reference-status-panel dd { margin: 0; color: var(--ink-soft); }
+
+.reference-page .section-heading h2 {
+  max-width: 59rem;
+  font-size: clamp(1.9rem, 3vw, 2.82rem);
+  line-height: 1.09;
+}
+
+.reference-audit-grid,
+.reference-catalog {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.reference-audit-grid article,
+.reference-card {
+  padding: 1.35rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255, 253, 248, .66);
+}
+
+.reference-audit-grid span,
+.reference-card > span {
+  color: var(--teal);
+  font-size: .66rem;
+  font-weight: 900;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+}
+
+.reference-audit-grid h3,
+.reference-card h3 {
+  font-family: var(--serif);
+  font-size: 1.42rem;
+  line-height: 1.25;
+}
+
+.reference-card ul {
+  display: grid;
+  gap: .8rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.reference-card li {
+  padding-top: .8rem;
+  border-top: 1px solid var(--line);
+}
+
+.reference-card a {
+  font-weight: 800;
+  text-underline-offset: .22rem;
+}
+
+.reference-card small {
+  display: block;
+  margin-top: .3rem;
+  color: var(--ink-soft);
+  line-height: 1.45;
+}
+
+.reference-rule {
+  padding: clamp(1.5rem, 4vw, 3rem);
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 1.2rem;
+  background: var(--ink);
+  color: white;
+}
+
+.reference-rule strong {
+  display: block;
+  max-width: 56rem;
+  font-family: var(--serif);
+  font-size: clamp(1.65rem, 2.6vw, 2.35rem);
+  line-height: 1.2;
+}
+
+.reference-rule p { color: rgba(255,255,255,.74); }
+
+@media (max-width: 66rem) {
+  .reference-page .reference-hero { grid-template-columns: 1fr; }
+  .reference-status-panel { max-width: 42rem; }
+}
+
+@media (max-width: 46rem) {
+  .reference-page .reference-hero h1 { font-size: clamp(2.25rem, 10.5vw, 3.25rem); }
+  .reference-audit-grid,
+  .reference-catalog { grid-template-columns: 1fr; }
+  .reference-status-panel dl { grid-template-columns: 1fr; gap: .2rem; }
+  .reference-status-badge { display: flex; width: fit-content; margin-left: 0; }
+}

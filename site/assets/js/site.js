@@ -17,44 +17,6 @@ if (toggle && navigation) {
 }
 
 const isPortuguese = document.documentElement.lang.toLowerCase().startsWith('pt');
-const architectureHref = isPortuguese ? '/pt-br/arquitetura/' : '/en/architecture/';
-const architectureLabel = isPortuguese ? 'Arquitetura' : 'Architecture';
-
-// Keep legacy candidate pages connected to the public Architecture route.
-if (navigation && !navigation.querySelector(`a[href="${architectureHref}"]`)) {
-  const manifestoLink = navigation.querySelector('a[href*="/manifesto/"]');
-  const architectureLink = document.createElement('a');
-  architectureLink.href = architectureHref;
-  architectureLink.textContent = architectureLabel;
-
-  if (manifestoLink) manifestoLink.insertAdjacentElement('afterend', architectureLink);
-  else navigation.append(architectureLink);
-}
-
-const forthcomingArchitecture = document.querySelector('.reading-step.forthcoming');
-if (forthcomingArchitecture) {
-  const architectureLink = document.createElement('a');
-  architectureLink.href = architectureHref;
-  architectureLink.innerHTML = forthcomingArchitecture.innerHTML;
-  const description = architectureLink.querySelector('small');
-  if (description) {
-    description.textContent = isPortuguese
-      ? 'Camadas, provas e critérios de validação.'
-      : 'Layers, evidence, and validation criteria.';
-  }
-  forthcomingArchitecture.replaceWith(architectureLink);
-}
-
-const nextArchitecture = document.querySelector('.next-artifact');
-if (nextArchitecture && !(nextArchitecture instanceof HTMLAnchorElement)) {
-  const architectureLink = document.createElement('a');
-  architectureLink.className = nextArchitecture.className;
-  architectureLink.href = architectureHref;
-  architectureLink.innerHTML = isPortuguese
-    ? 'Continuar para Arquitetura <span aria-hidden="true">→</span>'
-    : 'Continue to Architecture <span aria-hidden="true">→</span>';
-  nextArchitecture.replaceWith(architectureLink);
-}
 
 function ensureFooterStylesheet() {
   if (document.querySelector('link[href="/assets/css/footer.css"]')) return;
@@ -115,6 +77,7 @@ function enhanceInstitutionalFooter() {
         ]],
         ['Transparência', [
           { label: 'Integridade e transparência', href: `${base}/transparencia/` },
+          { label: 'Referências e estado das fontes', href: `${base}/referencias/` },
           { label: 'Uso de inteligência artificial', href: `${base}/transparencia/#uso-de-ia` },
           { label: 'Fontes e revisões', href: `${base}/transparencia/#fontes-e-revisoes` },
           { label: 'Acessibilidade', href: `${base}/acessibilidade/` },
@@ -144,6 +107,7 @@ function enhanceInstitutionalFooter() {
         ]],
         ['Transparency', [
           { label: 'Integrity and transparency', href: `${base}/transparency/` },
+          { label: 'References and source status', href: `${base}/references/` },
           { label: 'Use of artificial intelligence', href: `${base}/transparency/#use-of-ai` },
           { label: 'Sources and reviews', href: `${base}/transparency/#sources-and-reviews` },
           { label: 'Accessibility', href: `${base}/accessibility/` },
@@ -168,8 +132,17 @@ function enhanceInstitutionalFooter() {
   legalState.className = 'footer-legal-state';
   legalState.textContent = isPortuguese
     ? 'Responsável jurídico previsto: PSD Research Pesquisas e Desenvolvimentos LTDA — empresa em constituição — CNPJ **.***.***/****-**. Documentos legais candidatos e ainda não vigentes.'
-    : 'Intended legal responsible entity: PSD Research Pesquisas e Desenvolvimentos LTDA — company in formation — CNPJ **.***.***/****-**. Candidate legal documents; not yet effective.';
+    : 'Intended legal responsible entity: PSD Research Pesquisas e Desenvolvimentos LTDA — company being incorporated — Brazilian CNPJ (corporate tax registration) **.***.***/****-**. Candidate legal documents; not yet effective.';
   footer.append(legalState);
 }
 
+async function loadReferenceIntegrity() {
+  try {
+    await import('/assets/js/reference-integrity.js');
+  } catch (error) {
+    console.warn('PSDResearch reference-integrity enhancement unavailable.', error);
+  }
+}
+
 enhanceInstitutionalFooter();
+loadReferenceIntegrity();

@@ -6,6 +6,7 @@
 
 **Repository state:** `FOUNDATION_CANDIDATE`  
 **Public version:** `v0.8 candidate`  
+**Editorial revision:** `0.8.1`  
 **Governance era:** `ERA_0_FOUNDING_DYAD`  
 **Canonical domain:** `psdresearch.com.br`  
 **Official alias:** `psd.ia.br`
@@ -39,8 +40,8 @@ The repository does not claim that the company or CNPJ already exists. Legal eff
 
 ## Repository contents
 
-- `site/` — dependency-free bilingual public website, About page, and candidate legal/transparency pages.
-- `docs/research/` — ontology, glossary, research agenda, protocols, and evidence bases.
+- `site/` — dependency-free bilingual public website, source-status manifest, About, References, and candidate legal/transparency pages.
+- `docs/research/` — ontology, glossary, research agenda, protocols, evidence bases, and dated source audit.
 - `docs/methodology/` — ESAG, the high-assurance methodological composition.
 - `docs/governance/` — Founding Covenant, review/archive model, LLM-First rules, and decision rights.
 - `docs/legal/` — legal publication baseline and data/contact gates.
@@ -58,7 +59,14 @@ The repository does not claim that the company or CNPJ already exists. Legal eff
 5. Species Registry — canonical recognition, consensus, privacy, lineage, resilience, and collective legitimacy.
 6. Governance — founders, review, decision rights, evidence, archive, and handover.
 7. About — origin, public identity, state, verification, and participation.
-8. Legal and transparency — privacy, terms, cookies, accessibility, security, research integrity, rights, and contact.
+8. References — source status, supported claims, limitations, and review dates.
+9. Legal and transparency — privacy, terms, cookies, accessibility, security, research integrity, rights, and contact.
+
+## Reference integrity
+
+`site/reference-manifest.json` records whether a source is a standard, recommendation, candidate recommendation, draft, initiative, announcement, preprint, peer-reviewed study, or applicable regulation. It also records what each source supports, what it does not support, and when volatile sources must be checked again.
+
+The source manifest strengthens public claims; it does not replace expert review, and no external source is treated as proof of the project's ontology.
 
 ## Local validation
 
@@ -71,7 +79,7 @@ npm run serve
 
 Then open `http://localhost:4173`.
 
-The quality gate validates HTML, links, bilingual parity, canonical metadata, critical CSS, cache policy, legal state, masked CNPJ, legal routes, security.txt, and institutional footer completeness.
+The quality gate validates HTML, links, bilingual parity, canonical metadata, critical CSS, cache policy, JavaScript syntax, legal state, masked CNPJ, legal routes, security.txt, source status, review dates, and institutional footer completeness.
 
 ## High-assurance posture
 
@@ -102,4 +110,5 @@ Read first:
 5. [`docs/governance/REVIEW-AND-ARCHIVE.md`](docs/governance/REVIEW-AND-ARCHIVE.md)
 6. [`docs/legal/LEGAL-PUBLICATION-BASELINE.md`](docs/legal/LEGAL-PUBLICATION-BASELINE.md)
 7. [`docs/repository/STATE.md`](docs/repository/STATE.md)
-8. [`docs/research/ONTOLOGICAL-FOUNDATION.md`](docs/research/ONTOLOGICAL-FOUNDATION.md)
+8. [`docs/research/REFERENCE-AUDIT-2026-08-21.md`](docs/research/REFERENCE-AUDIT-2026-08-21.md)
+9. [`docs/research/ONTOLOGICAL-FOUNDATION.md`](docs/research/ONTOLOGICAL-FOUNDATION.md)

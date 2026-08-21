@@ -77,6 +77,7 @@ const contracts = [
   { pages:["pt-br/registro-da-especie/index.html","en/species-registry/index.html"], requiredStyles:["/assets/css/registry.css"], selectors:[".registry-page-v2 .registry-hero-v2 h1",".registry-threshold",".registry-question-grid"] },
   { pages:["pt-br/governanca/index.html","en/governance/index.html"], requiredStyles:["/assets/css/governance.css"], selectors:[".governance-page .governance-hero h1",".founding-dyad",".archive-chain",".handover-eras"] },
   { pages:["pt-br/sobre/index.html","en/about/index.html"], requiredStyles:["/assets/css/about.css","/assets/css/footer.css"], selectors:[".about-page-v2 .about-hero h1",".origin-timeline",".verification-grid"] },
+  { pages:["pt-br/referencias/index.html","en/references/index.html"], requiredStyles:["/assets/css/reference-integrity.css","/assets/css/footer.css"], selectors:[".reference-page .reference-hero h1",".reference-audit-grid",".reference-catalog"] },
   { pages:legalPages, requiredStyles:["/assets/css/legal.css","/assets/css/footer.css"], selectors:[".legal-page .legal-hero h1",".legal-status-card",".legal-document"] },
 ];
 

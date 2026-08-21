@@ -11,3 +11,24 @@
 
 /*.html
   Cache-Control: public, max-age=0, must-revalidate
+
+/pt-br/privacidade/*
+  X-Robots-Tag: noindex, nofollow
+/en/privacy/*
+  X-Robots-Tag: noindex, nofollow
+/pt-br/termos-de-uso/*
+  X-Robots-Tag: noindex, nofollow
+/en/terms-of-use/*
+  X-Robots-Tag: noindex, nofollow
+/pt-br/cookies-e-rastreamento/*
+  X-Robots-Tag: noindex, nofollow
+/en/cookies-and-tracking/*
+  X-Robots-Tag: noindex, nofollow
+/pt-br/direitos-e-licencas/*
+  X-Robots-Tag: noindex, nofollow
+/en/rights-and-licenses/*
+  X-Robots-Tag: noindex, nofollow
+/pt-br/contato/*
+  X-Robots-Tag: noindex, nofollow
+/en/contact/*
+  X-Robots-Tag: noindex, nofollow
