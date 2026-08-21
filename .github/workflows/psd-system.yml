@@ -16,6 +16,20 @@ permissions:
 jobs:
   validate:
     runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:17-alpine
+        env:
+          POSTGRES_USER: psd
+          POSTGRES_PASSWORD: psd
+          POSTGRES_DB: psd_system
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U psd -d psd_system"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
     defaults:
       run:
         working-directory: apps/psd-system
@@ -40,8 +54,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Report production dependency audit
-        run: npm audit --omit=dev --json || true
+      - name: Enforce production dependency audit
+        run: npm audit --omit=dev --audit-level=high
 
       - name: Typecheck, tests, and production build
         run: npm run check
+
+      - name: Verify PostgreSQL schema, seed, and repository read model
+        run: npm run db:verify:ci
