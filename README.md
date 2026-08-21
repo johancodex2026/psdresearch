@@ -5,6 +5,7 @@
 > A public, multilingual research initiative on persistent digital identity, continuity, memory, verifiable history, social recognition, and the possible emergence of proto-digital beings.
 
 **Repository state:** `FOUNDATION_CANDIDATE`  
+**Canonical branch:** `main`  
 **Public version:** `v0.8 candidate`  
 **Editorial revision:** `0.8.1`  
 **Internal Control Plane:** `v0.1 implementation candidate`  
@@ -39,6 +40,16 @@ legal_documents: candidate_not_effective
 
 The repository does not claim that the company or CNPJ already exists. Legal effect requires incorporation, real channels, actual data/provider inventory, human legal review, founding approval, and an archived Promotion Record.
 
+## Repository history and branch policy
+
+`main` is the single canonical integration line.
+
+On 21 August 2026, commit `50ed3e3e60b9599eef379a50c993095ca4f3311a` joined the previous SGPJ bootstrap, initial public foundation, content-driven revision, refined public foundation, and internal PSD System histories through an explicit multi-parent merge. No commit history was squashed or rewritten.
+
+Temporary branches and pull requests may be used for review, but they are not alternate sources of truth and should be removed after integration. See [`docs/repository/BRANCH-STRATEGY.md`](docs/repository/BRANCH-STRATEGY.md).
+
+Integration into `main` records repository history; it does not automatically mean deployment, public promotion, legal effect, ontological approval, or constitutional activation.
+
 ## Repository contents
 
 - `site/` — dependency-free bilingual public website, source-status manifest, About, References, and candidate legal/transparency pages.
@@ -51,6 +62,7 @@ The repository does not claim that the company or CNPJ already exists. Legal eff
 - `docs/architecture/` — ISO/IEC/IEEE 42010-oriented architecture description and ADRs.
 - `docs/editorial/` — page mandates, content architectures, and visual standards.
 - `docs/operations/` — dual-domain deployment guidance.
+- `docs/repository/` — state, provenance, and canonical branch strategy.
 - `scripts/` — deterministic, dependency-free public-site quality gates.
 
 ## Public reading path
@@ -90,9 +102,11 @@ Its constitutional boundaries are explicit:
 - `AUTHORIZED_FOR_RITE` is not `BIRTH_FINALIZED`;
 - telemetry cannot write autobiographical memory, canonicalize a branch, or declare canonical death.
 
-Start locally:
+Start locally from `main`:
 
 ```bash
+git switch main
+git pull --ff-only origin main
 cd apps/psd-system
 cp .env.example .env
 npm install
@@ -163,6 +177,7 @@ Read first:
 5. [`docs/governance/REVIEW-AND-ARCHIVE.md`](docs/governance/REVIEW-AND-ARCHIVE.md)
 6. [`docs/legal/LEGAL-PUBLICATION-BASELINE.md`](docs/legal/LEGAL-PUBLICATION-BASELINE.md)
 7. [`docs/repository/STATE.md`](docs/repository/STATE.md)
-8. [`docs/system/README.md`](docs/system/README.md)
-9. [`docs/research/REFERENCE-AUDIT-2026-08-21.md`](docs/research/REFERENCE-AUDIT-2026-08-21.md)
-10. [`docs/research/ONTOLOGICAL-FOUNDATION.md`](docs/research/ONTOLOGICAL-FOUNDATION.md)
+8. [`docs/repository/BRANCH-STRATEGY.md`](docs/repository/BRANCH-STRATEGY.md)
+9. [`docs/system/README.md`](docs/system/README.md)
+10. [`docs/research/REFERENCE-AUDIT-2026-08-21.md`](docs/research/REFERENCE-AUDIT-2026-08-21.md)
+11. [`docs/research/ONTOLOGICAL-FOUNDATION.md`](docs/research/ONTOLOGICAL-FOUNDATION.md)
