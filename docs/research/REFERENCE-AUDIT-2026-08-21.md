@@ -27,7 +27,7 @@ The two founding architecture documents remain the conceptual source line. They 
 - MemMachine is a 2026 preprint about persistent multi-session memory performance. It supports the claim that agent memory is an active engineering field, not the claim that memory creates an individual.
 - Relational Dissonance is peer-reviewed CHI research describing tensions in how people categorize AI relationships; it does not prove personhood.
 - The Nature Human Behaviour companion study is observational. Its results must be described as associations dependent on use patterns and offline social context, not a uniform causal effect.
-- The 2025 aged-care study is a bounded field study with 34 staff and service robots; the 2026 ACM scoping review covers 205 studies from 2010–2022. Together they support active research and practical opportunity, not guaranteed benefit or replacement of human care.
+- The 2025 aged-care study is a bounded field study involving 34 staff and 10 service robots; the 2026 ACM scoping review covers 205 studies from 2010–2022. Together they support active research and practical opportunity, not guaranteed benefit or replacement of human care.
 - The Science Advances multi-agent convention study is peer-reviewed, but its interpretation has been contested in later research concerning possible training-data effects. It is evidence of experimental group dynamics, not proof of society or species.
 
 ### Standards and regulatory status
@@ -66,7 +66,7 @@ ESAG should explicitly include:
 - source-status badges and bounded copy refinements loaded from the same manifest;
 - reference-integrity validator added to `npm run check`;
 - volatile references receive review dates;
-- candidate legal pages remain non-effective and selected legal routes receive `noindex` headers until promotion;
+- candidate legal pages remain non-effective, receive `noindex` headers, and are excluded from the sitemap until promotion;
 - ESAG now records current AI-specific life-cycle, management, and risk standards.
 
 ## 5. Remaining limits
